@@ -1,4 +1,9 @@
-// Component navigation menu seen on every page.
+// Contains the left sidebar: pinned pages, navigation, and the ad space.
+
+.docs-sidebar {
+    .docs-sidebar-label {}
+    .docs-sidebar-collapse-button {}
+}
 
 .docs-nav.menu {
   margin-top: 0.5rem;
