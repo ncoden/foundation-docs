@@ -56,7 +56,7 @@ header.docs-header {
         left: 0.9rem;
         z-index: 1;
         font-family: 'foundation-icons';
-        font-size: 1.75rem;
+        font-size: 15px;
         color: $primary-color;
     }
 }
@@ -69,7 +69,8 @@ header.docs-header {
     margin-bottom: 0.5rem;
     box-shadow: none;
     border-width: 1px;
-    font-size: 13px;
+    border-color: #E2E2E2;
+    font-size: 15px;
     height: 32px;
     font-weight: 300;
 
@@ -78,7 +79,8 @@ header.docs-header {
     }
 
     &:focus {
-        border-width: 1px 0;
+        border-color: #AFAFAF;
+        box-shadow: none;
     }
 }
 
