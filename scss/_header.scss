@@ -16,6 +16,12 @@ header.docs-header {
         border-radius: 2px;
     }
 
+    .docs-header-buttons {
+        @include breakpoint(medium up) {
+            float: right;
+        }
+    }
+
     .header-button {
         color: #757575;
         background: #e4e4e4;
