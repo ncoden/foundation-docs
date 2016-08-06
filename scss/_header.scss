@@ -1,0 +1,149 @@
+// Styles for the search bar and results list.
+
+header.docs-header {
+    width: 100%;
+
+    .docs-header-label {
+        float: left;
+    }
+
+    input {
+        float: left;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #E2E2E2;
+        border-radius: 2px;
+    }
+
+    .header-button {
+        color: #757575;
+        background: #e4e4e4;
+        border-radius: 3px;
+        height: auto;
+        padding: 7px 15px;
+        font-size: 13px;
+        display: inline-block;
+
+        &:hover {
+            background: #CACACA;
+        }
+    }
+
+    .pin-button {
+        @extend .header-button;
+    }
+
+    .recently-viewed {
+        @extend .header-button;
+
+        .recently-viewed-item {
+            display: none;
+        }
+    }
+}
+
+
+.twitter-typeahead {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '\f16c';
+        display: block;
+        position: absolute;
+        top: 0.4rem;
+        left: 0.9rem;
+        z-index: 1;
+        font-family: 'foundation-icons';
+        font-size: 1.75rem;
+        color: $primary-color;
+    }
+}
+
+.docs-search:not(.tt-input),
+.tt-input,
+.tt-hint {
+    right: 0;
+    padding-left: 3rem;
+    margin-bottom: 0.5rem;
+    box-shadow: none;
+    border-width: 1px;
+    font-size: 13px;
+    height: 32px;
+    font-weight: 300;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:focus {
+        border-width: 1px 0;
+    }
+}
+
+.tt-menu {
+    background: white;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.tt-suggestion {
+    @include clearfix;
+    padding: 0.5rem;
+
+    &:hover,
+    &.tt-cursor {
+        background: $primary-color;
+        color: #fff;
+        cursor: pointer;
+
+        .meta {
+            color: #fff;
+        }
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .meta {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: $dark-gray;
+        margin-left: 0.5rem;
+    }
+
+    .desc {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @include breakpoint(medium) {
+        padding: 1rem;
+
+        .name {
+            float: left;
+            width: 40%;
+        }
+
+        .desc {
+            float: left;
+            width: 60%;
+        }
+    }
+}
+
+.tt-empty {
+    padding: 1rem;
+
+    &:before {
+        content: ':(';
+        font-weight: bold;
+        font-size: 2rem;
+        color: #999;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+}
