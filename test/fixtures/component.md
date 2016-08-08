@@ -17,10 +17,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 <div class="next-previous-links">
   <div class="previous-page-link">
     <div class="subtitle">PREVIOUS</div>
-    <a href="#">Installation</a>
+    <i class="fi-arrow-left"></i> <a href="#">Installation</a>
   </div>
   <div class="next-page-link">
     <div class="subtitle">NEXT</div>
-    <a href="#">Starter Projects</a>
+    <a href="#">Starter Projects</a> <i class="fi-arrow-right"></i>
   </div>
 </div>

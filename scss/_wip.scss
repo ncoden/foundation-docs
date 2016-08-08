@@ -10,6 +10,10 @@
     @include clearfix;
   }
 
+  a {
+    color: black;
+  }
+
   .previous-page-link {
     display: inline-block;
   }
@@ -17,6 +21,10 @@
   .next-page-link {
     float: right;
     display: inline-block;
+  }
+
+  i {
+    color: black;
   }
 
 }
