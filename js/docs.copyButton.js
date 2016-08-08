@@ -23,7 +23,7 @@ $('[data-docs-code]').each(function(index, value) {
 
   // Change the text of the copy button when it's clicked on
   clipboard.on('success', function(event) {
-    $button.text('Copied!');
+    $button.text('Copied to clipboard!');
     window.setTimeout(function() {
       $button.text('Copy');
     }, 3000);
