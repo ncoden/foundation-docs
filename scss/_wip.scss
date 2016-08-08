@@ -1,6 +1,23 @@
 // Work in Progress
 // This file contains classes and components that aren't yet ready to be moved.
 
+
+// Next/Previous links
+.next-previous-links {
+  width: 100%;
+  background: black;
+
+  .previous-page-link {
+  }
+
+  .next-page-link {
+    float: right;
+  }
+
+}
+
+// Pin Component
+// Allows users to pin pages to the left sidebar
 .pin-button {
   color: #757575;
   background: #e4e4e4;

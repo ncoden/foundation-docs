@@ -13,3 +13,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ```html_example
 <button class="button" type="button">Button</a>
 ```
+
+<div class="next-previous-links">
+  <div class="previous-page-link">
+    <div class="subtitle">PREVIOUS</div>
+    <a href="#">Installation</a>
+  </div>
+  <div class="next-page-link">
+    <div class="subtitle">NEXT</div>
+    <a href="#">Starter Projects</a>
+  </div>
+</div>
