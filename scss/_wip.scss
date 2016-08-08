@@ -5,13 +5,18 @@
 // Next/Previous links
 .next-previous-links {
   width: 100%;
-  background: black;
+
+  &:after {
+    @include clearfix;
+  }
 
   .previous-page-link {
+    display: inline-block;
   }
 
   .next-page-link {
     float: right;
+    display: inline-block;
   }
 
 }

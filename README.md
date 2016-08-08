@@ -78,6 +78,8 @@ There are two kinds of tests in the repository:
 
 Run `npm test` to run the test suite, as well as a BrowserSync server pointing to the visual tests. You can make changes to the HTML, Sass, or JavaScript of the library and see the changes refresh live. Use this test environment to make changes to the documentation template.
 
+**Note:** Make sure that you've installed [Supercollider](https://github.com/zurb/supercollider/blob/master/docs/usage.md) if you want to see how compiled Markdown files will look while running ```npm run test:visual```.
+
 ### Testing with Foundation
 
 To test with an actual framework's documentation, you can hook the two folders together using `npm link`.
