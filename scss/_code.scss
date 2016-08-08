@@ -1,15 +1,29 @@
 // Styles for code examples are here.
 
+// Variables
+$docs-code-padding: rem-calc(20px);
+$docs-code-border-color: #DEDEDE;
+
+.docs-code-container {
+  border: 1px solid $docs-code-border-color;
+  margin-bottom: 1.5rem;
+  border-radius: rem-calc(3px);
+  overflow: hidden;
+  position: relative;
+}
+
 .docs-code,
 pre {
   position: relative;
 
+  // Light Code UI
   code {
     display: block;
     overflow-x: auto;
-    padding: rem-calc(20px);
-    background: #f9f9f9;
-    margin-bottom: 1.5rem;
+    background: #FAFAFA;
+    border: 0;
+    border-top: 1px solid $docs-code-border-color;
+    padding: $docs-code-padding;
   }
 
   .docs-reference & code {
@@ -29,40 +43,38 @@ pre {
   }
 }
 
+// Dark Code UI
 .docs-code .bash {
   background: #444444;
-  border: 1px solid #292929;
   color: #B8E986;
-  border-radius: 3px;
   position: relative;
-  padding-top: 2rem;
 
   &::before {
     content: '$ | ';
     color: #AFAFAF;
   }
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1.25rem;
-    // background: #777;
-    border-radius: 4px 4px 0 0;
+  // Copy button in Dark UI
+  & + .docs-code-copy {
+    background: #616161;
+    color: #CFCFCF;
   }
+}
+
+.docs-code-live {
+  background: white;
+  padding-top: rem-calc(15px);
+  padding-left: $docs-code-padding;
 }
 
 // Styles for the copy button shown on every code sample
 .docs-code-copy {
   position: absolute;
-  top: rem-calc(20px);
+  top: rem-calc(15px);
   right: rem-calc(20px);
-  background: #616161;
+  background: #EBEBEB;
   border-radius: rem-calc(3px);
-  color: #CFCFCF;
+  color: #838383;
   font-size: 0.8rem;
   padding: 0.75rem 1rem;
   z-index: 1;
@@ -70,7 +82,7 @@ pre {
 
   &:hover,
   &.zeroclipboard-is-hover {
-    background: #505050;
+    background: #DEDEDE;
   }
 
   &:active {

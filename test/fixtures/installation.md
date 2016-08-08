@@ -30,6 +30,8 @@ description: There are many ways to install Foundation, but if you're just getti
 ## Command-Line Tool
 Not a fan of GUIs? The Node-powered Foundation CLI can install the same template projects for you. Install it with npm:
 
+1. #### Install the command-line interface
+
 ``` bash
 npm install --global foundation-cli
 ```
