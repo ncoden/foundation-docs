@@ -36,10 +36,6 @@ header.docs-header {
         }
     }
 
-    .pin-button {
-        @extend .header-button;
-    }
-
     .recently-viewed {
         @extend .header-button;
 
