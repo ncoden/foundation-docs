@@ -18,8 +18,7 @@
 
 .docs-nav.menu {
   // margin-top: 0.5rem;
-  background: #fafafa;
-  padding-top: 0.25rem;
+  margin-top: 0.25rem;
   padding-bottom: 1rem;
 
   li small {
@@ -39,7 +38,7 @@
     display: block;
 
     &:hover {
-      background: rgba(#000, 0.05);
+      background: #fafafa;
     }
   }
 
