@@ -102,6 +102,7 @@ header.docs-header {
         background: $primary-color;
         color: #fff;
         cursor: pointer;
+        border-radius: rem-calc(3px);
 
         .meta {
             color: #fff;
@@ -140,7 +141,7 @@ header.docs-header {
     }
 
     @include breakpoint(medium) {
-        padding: 0.4rem;
+        padding: 0.25rem 0.5rem;
 
         .name {
             float: left;
