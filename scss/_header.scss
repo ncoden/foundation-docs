@@ -13,7 +13,7 @@ header.docs-header {
         width: 100%;
         background: #FFFFFF;
         border: 1px solid #E2E2E2;
-        border-radius: 2px;
+        border-radius: rem-calc(2px);
     }
 
     .docs-header-buttons {
@@ -68,13 +68,13 @@ header.docs-header {
 .tt-input,
 .tt-hint {
     right: 0;
-    padding-left: 3rem;
+    padding-left: 2.2rem;
     margin-bottom: 0.5rem;
     box-shadow: none;
     border-width: 1px;
     border-color: #E2E2E2;
-    font-size: 15px;
-    height: 32px;
+    font-size: rem-calc(15px);
+    height: rem-calc(34px);
     font-weight: 300;
 
     &:hover {
@@ -108,25 +108,39 @@ header.docs-header {
         }
     }
 
+    &:active {
+        background: darken($primary-color, 5%);
+        color: #fff;
+        cursor: pointer;
+
+        .meta {
+            color: #fff;
+        }
+    }
+
     .name {
         font-weight: bold;
+        font-size: rem-calc(16px);
     }
 
     .meta {
         text-transform: uppercase;
-        font-size: 0.8rem;
+        font-size: rem-calc(10px);
+        letter-spacing: rem-calc(0.4px);
         color: $dark-gray;
-        margin-left: 0.5rem;
+        // margin-left: 0.5rem;
+        display: block;
     }
 
     .desc {
+        font-size: rem-calc(14px);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
     @include breakpoint(medium) {
-        padding: 1rem;
+        padding: 0.4rem;
 
         .name {
             float: left;
@@ -134,10 +148,19 @@ header.docs-header {
         }
 
         .desc {
-            float: left;
+            // float: left;
             width: 60%;
         }
     }
+}
+
+.tt-open {
+  margin-top: rem-calc(-9px);
+
+  @include breakpoint(medium up) {
+      padding: 0.4rem;
+      box-shadow: 0 4px 6px rgba(#000, 0.15);
+  }
 }
 
 .tt-empty {
