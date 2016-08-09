@@ -1,40 +1,40 @@
 <article class="docs-component" id="docs-{{escape title}}">
 
-<a href="#docs-menu" class="small secondary expanded button hide-for-medium">Jump to Nav</a>
+  <a href="#docs-menu" class="small secondary expanded button hide-for-medium">Jump to Nav</a>
 
-{{> header}}
+  {{> header}}
 
-<hr>
+  <div class="row">
+      {{> table-of-contents}}
+  </div>
 
-{{!-- Start container for docs and table of contents --}}
-<div class="row">
+  {{!-- Start container for docs and table of contents --}}
+  <div class="row">
 
-{{!-- Start container for docs --}}
-<div class="large-9 columns" id="docs">
+    {{!-- Start container for docs --}}
+    <div class="medium-12 columns" id="docs">
 
-{{ docs }}
+      {{ docs }}
 
-{{#if sass}}
-<hr>
-{{> sass-reference}}
-{{/if}}
+      {{#if sass}}
+      <hr>
+      {{> sass-reference}}
+      {{/if}}
 
-{{#if js}}
-<hr>
-{{> javascript-reference}}
-{{/if}}
+      {{#if js}}
+      <hr>
+      {{> javascript-reference}}
+      {{/if}}
 
-{{#if sass}}
-<!-- <hr> -->
-{{> building-blocks}}
-{{/if}}
+      {{#if sass}}
+      <!-- <hr> -->
+      {{> building-blocks}}
+      {{/if}}
 
-</div>
-{{!-- End container for docs --}}
+    </div>
+    {{!-- End container for docs --}}
 
-{{> table-of-contents}}
-
-</div>
-{{!-- End container for docs and table of contents --}}
+  </div>
+  {{!-- End container for docs and table of contents --}}
 
 </article>
