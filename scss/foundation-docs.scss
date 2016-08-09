@@ -59,6 +59,17 @@
   }
 }
 
+.docs-ad-unit {
+  background: #074E68;
+  border-radius: rem-calc(3px);
+  padding: 20px;
+  color: white;
+
+  h3 {
+    font-size: rem-calc(24px);
+  }
+}
+
 // .docs-component {
 //   .callout {
 //     border-left-width: 10px;
