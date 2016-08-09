@@ -1,9 +1,8 @@
-// Table of contents anchored to the right of each page.
+// Table of contents which becomes anchored to the top of each page
 
 .docs-toc {
-  padding-bottom: 1rem;
-  margin: 1.5rem auto;
-  border-bottom: 1px solid $light-gray;
+  margin: 3rem auto 0;
+  // border-bottom: 1px solid $light-gray;
   font-size: 0.85rem;
   display: block!important;
 
@@ -16,6 +15,12 @@
     margin-top: 0;
     border-top: 0;
     padding-top: 0;
+    display: block;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
   }
 
   li {
@@ -23,6 +28,10 @@
     line-height: $global-lineheight;
     padding: 0;
     display: inline-block;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
