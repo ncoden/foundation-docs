@@ -43,9 +43,14 @@
 
 .docs-contribute-menu {
   font-size: rem-calc(14px);
+  margin-bottom: 0.75rem;
 
   @include breakpoint(small only) {
     font-size: rem-calc(14);
+  }
+
+  a {
+    color: $dark-gray;
   }
 
   i {
