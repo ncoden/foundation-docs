@@ -1,0 +1,33 @@
+// Pin Component
+// Allows users to pin pages to the left sidebar
+
+.pin-button {
+  color: #757575;
+  background: #e4e4e4;
+  border-radius: 3px;
+  height: auto;
+  padding: 7px 15px;
+  font-size: 13px;
+  display: inline-block;
+
+  &:hover {
+      background: #CACACA;
+  }
+
+  &:active {
+    color: white;
+    background: $primary-color;
+  }
+
+} // end pin-button
+
+.pin-list {
+
+  .pin-list-item {
+    &:before {
+      content: 'icon';
+      margin-right: rem-calc(4px);
+    }
+  }
+
+} // end pin-list

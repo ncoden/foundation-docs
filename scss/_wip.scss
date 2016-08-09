@@ -1,7 +1,6 @@
 // Work in Progress
 // This file contains classes and components that aren't yet ready to be moved.
 
-
 // Next/Previous links
 .next-previous-links {
   width: 100%;
@@ -28,37 +27,6 @@
   }
 
 }
-
-// Pin Component
-// Allows users to pin pages to the left sidebar
-.pin-button {
-  color: #757575;
-  background: #e4e4e4;
-  border-radius: 3px;
-  height: auto;
-  padding: 7px 15px;
-  font-size: 13px;
-  display: inline-block;
-
-  &:hover {
-      background: #CACACA;
-  }
-
-  &:active {
-    color: white;
-    background: $primary-color;
-  }
-
-}
-
-.pin-list {
-
-  .pin-component-list-items {}
-
-} // end pin-component-list
-
-
-
 
 // Horizontal Rule
 hr {
