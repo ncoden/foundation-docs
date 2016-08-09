@@ -15,6 +15,11 @@ A basic button can be created with minimal markup. Because buttons can be used f
 - Use the `<a>` tag if the button is a link to another page, or a link to an anchor within a page. Generally anchors don't require JavaScript to work.
 - Use the `<button>` tag if the button performs an action that changes something on the current page. `<button>` elements almost always require JavaScript to function.
 
+```html_example
+<!-- Anchors (links) -->
+<a href="about.html" class="button">Learn More</a>
+```
+
 <div class="primary callout">
   <p>Add the attribute <code>type="button"</code> to <code>&lt;button&gt;</code> elements, unless the button submits a form, in which case you use <code>type="submit"</code></p>
 </div>

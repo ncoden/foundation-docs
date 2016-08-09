@@ -1,12 +1,12 @@
 // Styles for code examples are here.
 
 // Variables
-$docs-code-padding: rem-calc(20px);
+$docs-code-padding: 1rem;
 $docs-code-border-color: #DEDEDE;
 
 .docs-code-container {
   border: 1px solid $docs-code-border-color;
-  margin-bottom: 1.5rem;
+  margin: rem-calc(40px) auto;
   border-radius: rem-calc(3px);
   overflow: hidden;
   position: relative;
@@ -63,14 +63,13 @@ pre {
 
 .docs-code-live {
   background: white;
-  padding-top: rem-calc(15px);
-  padding-left: $docs-code-padding;
+  padding: $docs-code-padding $docs-code-padding 0 $docs-code-padding;
 }
 
 // Styles for the copy button shown on every code sample
 .docs-code-copy {
   position: absolute;
-  top: rem-calc(15px);
+  top: 0.75rem;
   right: rem-calc(20px);
   background: #EBEBEB;
   border-radius: rem-calc(3px);
