@@ -41,27 +41,34 @@ description: There are many ways to install Foundation, but if you're just getti
 
 Not a fan of GUIs? The Node-powered Foundation CLI can install the same template projects for you. Install it with npm:
 
-```bash
-npm install --global foundation-cli
-```
+<div class="steps" markdown="1">
 
-Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the command with `sudo` at the beginning:
+  <div class="step">
+    <h4 class="">Install the tool</h4>
+    ```bash
+    npm install --global foundation-cli
+    ```
+  </div>
 
-```bash
-sudo npm install --global foundation-cli
-```
+  Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the command with `sudo` at the beginning:
 
-<div class="callout alert">
-  <p>If you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
+  ```bash
+  sudo npm install --global foundation-cli
+  ```
 
-  <p>If you want to remove the old CLI, run <code>gem uninstall foundation</code>. After testing this new CLI, if you want to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
+  <div class="callout alert">
+    <p>If you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
+
+    <p>If you want to remove the old CLI, run <code>gem uninstall foundation</code>. After testing this new CLI, if you want to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
+  </div>
+
+  <h4 class="step">Run the project</h4>
+  Once you've installed the CLI, use the `new` command to start making a new project:
+
+  ```bash
+  foundation new
+  ```
 </div>
-
-Once you've installed the CLI, use the `new` command to start making a new project:
-
-```bash
-foundation new
-```
 
 ---
 
@@ -125,24 +132,24 @@ Start with this HTML template and adapt it to your needs.
 ```html
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation Starter Template</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Starter Template</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+</head>
+<body>
+  <h1>Hello, world!</h1>
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/what-input.min.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
 
-  </body>
+</body>
 </html>
 
 ```
@@ -180,8 +187,8 @@ Here's what comes in the package.
 - `scss/`: Source Sass files. Use this folder as a load path in Sass.
 - `js/`: Source JavaScript files. If you're using a build system, make sure `foundation.core.js` is loaded first.
 - `dist/`: Compiled files.
-  - `css/`: Compiled CSS files. Includes minified and unminified files.
-  - `js/`: Concatenated JavaScript files. Includes minified and unminified files.
+- `css/`: Compiled CSS files. Includes minified and unminified files.
+- `js/`: Concatenated JavaScript files. Includes minified and unminified files.
 
 ---
 

@@ -30,7 +30,7 @@ pre {
     overflow-x: auto;
     background: #FAFAFA;
     border: 0;
-    border-top: 1px solid $docs-code-border-color;
+    border-top: none;
     padding: $docs-code-padding;
   }
 
@@ -71,6 +71,7 @@ pre {
 
 .docs-code-live {
   background: white;
+  border-bottom: 1px solid $docs-code-border-color;
   padding: $docs-code-padding $docs-code-padding 0 $docs-code-padding;
 }
 

@@ -36,3 +36,33 @@ li,
 ol {
   line-height: 1.65;
 }
+
+
+// Steps
+// Mainly used on Installation page
+.steps {
+  h4 {
+    display: inline-block;
+    clear: right;
+
+    &:before {
+      display: block;
+      width: 100%;
+      float: right;
+    }
+  }
+
+  @for $i from 0 through 100 {
+    .step-#{$i}:before {
+      @extend h4;
+      color: $medium-gray;
+      content: '#{$i+1}';
+      margin-right: 1rem;
+      text-indent: 2rem;
+    }
+  }
+
+  .step:last-child {
+
+  }
+}
