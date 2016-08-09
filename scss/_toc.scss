@@ -19,8 +19,10 @@
   }
 
   li {
-    margin: 0;
+    margin: rem-calc(5px 10px);
+    line-height: $global-lineheight;
     padding: 0;
+    display: inline-block;
   }
 }
 
