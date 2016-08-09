@@ -4,6 +4,14 @@
 $docs-code-padding: 1rem;
 $docs-code-border-color: #DEDEDE;
 
+code {
+    font-family: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
+    color: #0a0a0a;
+    background-color: #f5f5f5;
+    border: 1px solid #cacaca;
+    padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
 .docs-code-container {
   border: 1px solid $docs-code-border-color;
   margin: rem-calc(40px) auto;
