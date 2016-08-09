@@ -62,6 +62,6 @@
 
 // Horizontal Rule
 hr {
-    border-bottom: 1px solid #e8e8e8;
-    margin: rem-calc(50px) auto;
+    border-bottom: 1px solid $light-gray;
+    margin: rem-calc(80px) auto;
 }
