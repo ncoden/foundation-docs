@@ -45,29 +45,37 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
 
   <div class="step">
     <h4 class="">Install the tool</h4>
-    ```bash
-    npm install --global foundation-cli
-    ```
+    <div class="indented">
+      ```bash
+      npm install --global foundation-cli
+      ```
+    </div>
   </div>
 
-  Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the command with `sudo` at the beginning:
+  <!-- @TODO: This area should be put into the FAQ component -->
+  <!-- Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the command with `sudo` at the beginning:
 
   ```bash
   sudo npm install --global foundation-cli
   ```
 
   <div class="callout alert">
-    <p>If you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
+  <p>If you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
 
-    <p>If you want to remove the old CLI, run <code>gem uninstall foundation</code>. After testing this new CLI, if you want to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
+  <p>If you want to remove the old CLI, run <code>gem uninstall foundation</code>. After testing this new CLI, if you want to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
+  </div> -->
+
+  <div class="step">
+  <h4 class="">Run the project</h4>
+  <div class="indented">
+    Once you've installed the CLI, use the `new` command to start making a new project:
+
+    ```bash
+    foundation new
+    ```
+  </div>
   </div>
 
-  <h4 class="step">Run the project</h4>
-  Once you've installed the CLI, use the `new` command to start making a new project:
-
-  ```bash
-  foundation new
-  ```
 </div>
 
 ---

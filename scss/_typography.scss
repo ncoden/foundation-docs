@@ -43,7 +43,7 @@ ol {
 .steps {
   h4 {
     display: inline-block;
-    clear: right;
+    // float: left;
 
     &:before {
       display: block;
@@ -52,17 +52,24 @@ ol {
     }
   }
 
-  @for $i from 0 through 100 {
+  .indented {
+    margin-left: 3rem;
+  }
+
+  // Create numbers for the steps
+  // 15 is just an est. max that would ever need to appear
+  @for $i from 0 through 15 {
     .step-#{$i}:before {
       @extend h4;
       color: $medium-gray;
       content: '#{$i+1}';
+      display: inline-block;
+      float: left;
+      width: auto;
+      // width: 30px;
       margin-right: 1rem;
-      text-indent: 2rem;
     }
-  }
-
-  .step:last-child {
 
   }
-}
+
+} // end .steps
