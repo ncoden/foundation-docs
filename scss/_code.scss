@@ -157,6 +157,16 @@ pre {
   z-index: auto !important;
 }
 
+// Correct line-height overlap for inline code snippets
+ol code,
+li code,
+.callout code {
+  line-height: $global-lineheight + rem-calc(5px);
+}
+
+
+
+
 // github.com style for highlight.js
 // Created by Vasily Polovnyov <vast@whiteants.net>
 .hljs {
