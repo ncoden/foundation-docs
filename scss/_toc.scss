@@ -1,7 +1,7 @@
 // Table of contents which becomes anchored to the top of each page
 
 .docs-toc {
-  margin: 3rem auto 0;
+  margin: 1.5rem auto -3rem;
   // border-bottom: 1px solid $light-gray;
   font-size: 0.85rem;
   display: block!important;
@@ -28,6 +28,7 @@
     line-height: $global-lineheight;
     padding: 0;
     display: inline-block;
+    font-size: rem-calc(16);
 
     &:first-child {
       margin-left: 0;
