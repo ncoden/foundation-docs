@@ -1,3 +1,4 @@
 $('.step').each(function (i) {
-    $(this).addClass('step-' + i);
+    var stepNumber = parseInt(i + 1);
+    $(this).addClass('step-' + stepNumber);
 });
