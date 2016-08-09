@@ -41,6 +41,9 @@ ol {
 // Steps
 // Mainly used on Installation page
 .steps {
+
+  margin-top: rem-calc(20px);
+
   h4 {
     display: inline-block;
     // float: left;
@@ -53,10 +56,22 @@ ol {
   }
 
   .indented {
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 
-  // Create numbers for the steps
+  // Generate steps divs
+  @for $i from 1 through 15 {
+    .step-#{$i} {
+      margin-top: rem-calc(20px);
+    }
+  }
+
+  .step-1 {
+    margin-top: 0;
+  }
+
+
+  // Create numbers next to the steps
   // 15 is just an est. max that would ever need to appear
   @for $i from 1 through 15 {
     .step-#{$i}:before {
@@ -65,7 +80,7 @@ ol {
       content: '#{$i}';
       display: inline-block;
       float: left;
-      width: auto;
+      width: 1rem;
       // width: 30px;
       margin-right: 1rem;
     }

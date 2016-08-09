@@ -31,6 +31,9 @@ description: There are many ways to install Foundation, but if you're just getti
 </div>
 
 
+---
+
+
 <!--## Yeti Launch-->
 
 <!--Yeti Launch is our Mac app for quickly spinning up blank projects for any of the three Foundation frameworks. If you're just getting started with Foundation, we recommend downloading Yeti Launch to get going right away.-->
@@ -66,12 +69,23 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
   </div> -->
 
   <div class="step">
-  <h4 class="">Run the project</h4>
+  <h4 class="">Create a new Foundation project</h4>
   <div class="indented">
     Once you've installed the CLI, use the `new` command to start making a new project:
 
     ```bash
     foundation new
+    ```
+  </div>
+  </div>
+
+  <div class="step">
+  <h4 class="">Run the project</h4>
+  <div class="indented">
+    Finally, run npm start to run the Sass compiler. It will re-run every time you save a Sass file. This command is something you’ll use every time you work on your project.
+
+    ```bash
+    npm start
     ```
   </div>
   </div>
