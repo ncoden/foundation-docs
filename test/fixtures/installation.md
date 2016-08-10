@@ -24,9 +24,11 @@ description: There are many ways to install Foundation, but if you're just getti
   </div>
   <div class="medium-3 columns">
     <h4>Other ways to install</h4>
-    <a href="#">HTML Starter Templates</a>
-    <a href="#">CDN Links</a>
-    <a href="#">Package Managers</a>
+    <ul>
+      <li><a href="#">CDN Links</a></li>
+      <li><a href="#">Package Managers</a></li>
+      <li><a href="#">Yeti Launch</a></li>
+    </ul>
   </div>
 </div>
 
