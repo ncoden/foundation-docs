@@ -1,7 +1,64 @@
 // Contains styles for the Github Recent Activity and Github Help Wanted componenets
 
+// Recent Activity
 .github-recent-activity {
   ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+
+      li {
+        margin: 10px auto;
+        color: $medium-gray;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      img {
+        margin-right: rem-calc(10px);
+      }
+
+      a {
+        color: $secondary-color;
+      }
+
+      .github-recent-activity-date {
+        font-size: rem-calc(13px);
+        float: right;
+      }
+  }
+}
+
+// Help Wanted
+.github-help-wanted {
+  .cards-docs {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+      .card-docs {
+        position: relative;
+        color: $dark-gray;
+        background: $medium-gray;
+        border: 1px solid $dark-gray;
+        border-radius: rem-calc(4px);
+        width: 33.3333%;
+        height: 180px;
+        padding: rem-calc(8px);
+      }
+
+      span.card-docs {
+        color: $medium-gray;
+      }
+
+      .button-docs {
+        margin-bottom: 0;
+        position: absolute;
+        bottom: rem-calc(8px);
+      }
+
   }
 }
