@@ -6,59 +6,110 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
 
-      li {
-        margin: 10px auto;
-        color: $medium-gray;
+    li {
+      margin: 10px auto;
+      color: $medium-gray;
+      vertical-align: baseline;
+      line-height: $global-lineheight;
 
-        &:first-child {
-          margin-top: 0;
-        }
+      &:first-child {
+        margin-top: 0;
       }
+    }
 
-      img {
-        margin-right: rem-calc(10px);
-      }
+    span {
+      vertical-align: baseline;
+      line-height: $global-lineheight;
+      display: inline-block;
+    }
 
-      a {
-        color: $secondary-color;
-      }
+    img {
+      margin-right: rem-calc(10px);
+      display: inline-block;
+    }
 
-      .github-recent-activity-date {
-        font-size: rem-calc(13px);
-        float: right;
-      }
+    a {
+      color: $secondary-color;
+      line-height: $global-lineheight;
+      vertical-align: baseline;
+    }
+
+    .github-recent-activity-date {
+      font-size: rem-calc(13px);
+      float: right;
+      padding: rem-calc(3px);
+      line-height: $global-lineheight;
+      vertical-align: baseline;
+    }
   }
 }
 
 // Help Wanted
 .github-help-wanted {
-  .cards-docs {
+  .card-container-docs {
     margin: 0 auto;
     padding: 0;
     position: relative;
     width: 100%;
+    list-style: none;
+    @include grid-row;
+    box-sizing: border-box;
 
-      .card-docs {
-        position: relative;
-        color: $dark-gray;
-        background: $medium-gray;
-        border: 1px solid $dark-gray;
-        border-radius: rem-calc(4px);
-        width: 33.3333%;
-        height: 180px;
-        padding: rem-calc(8px);
+    .card-docs {
+      position: relative;
+      color: $dark-gray;
+      background: #535353;
+      border: 1px solid $dark-gray;
+      border-radius: rem-calc(4px);
+      height: 180px;
+      padding: rem-calc(15px);
+      display: inline-block;
+      overflow: hidden;
+      float: left;
+      float: left;
+
+      @include breakpoint(large up) {
+        height: 200px;
       }
 
-      span.card-docs {
-        color: $medium-gray;
-      }
-
-      .button-docs {
-        margin-bottom: 0;
+      &:after {
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(#535353,1) 100%);
+        height: 100%;
+        content: '';
         position: absolute;
-        bottom: rem-calc(8px);
+        top: 0;
+        right: 0;
+        left: 0;
       }
+    }
+
+    .card-docs span {
+      @extend .subtitle;
+      vertical-align: middle;
+      color: $medium-gray;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: white;
+      margin-top: rem-calc(4px);
+    }
+
+    .button-docs {
+      position: absolute;
+      bottom: rem-calc(15px);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 90%;
+      z-index: 1;
+    }
+
+    i {
+      color: #FFDD5E;
+    }
 
   }
 }
