@@ -19,7 +19,7 @@ $faq-accordion-item-background-hover: $light-gray !default;
 
 /// Default padding of an faq-accordion item.
 /// @type Number | List
-$faq-accordion-item-padding: 1.25rem 1rem !default;
+$faq-accordion-item-padding: 1rem 1rem !default;
 
 /// Default background color of tab content.
 /// @type Color
@@ -41,18 +41,21 @@ $faq-accordion-content-padding: 1rem !default;
 @mixin faq-accordion-container {
   list-style-type: none;
   background: $faq-accordion-background;
-  margin-#{$global-left}: 0;
+  // margin-#{$global-left}: 0;
+  margin: 1.5rem auto;
 }
 
 /// Adds styles for the faq-accordion item. Apply this to the list item within an faq-accordion ul.
 @mixin faq-accordion-item {
-  &:first-child > :first-child {
-    border-radius: $global-radius $global-radius 0 0;
-  }
+  margin: 0.5rem auto;
 
-  &:last-child > :last-child {
-    border-radius: 0 0 $global-radius $global-radius;
-  }
+  // &:first-child > :first-child {
+  //   border-radius: $global-radius $global-radius 0 0;
+  // }
+  //
+  // &:last-child > :last-child {
+  //   border-radius: 0 0 $global-radius $global-radius;
+  // }
 }
 
 /// Adds styles for the title of an faq-accordion item. Apply this to the link within an faq-accordion item.
@@ -64,11 +67,13 @@ $faq-accordion-content-padding: 1rem !default;
   color: $faq-accordion-item-color;
   position: relative;
   border: $faq-accordion-content-border;
-  border-bottom: 0;
+  // border-bottom: 0;
+  border-radius: 2px;
+  color: black;
 
   :last-child:not(.is-active) > & {
-    border-radius: 0 0 $global-radius $global-radius;
-    border-bottom: $faq-accordion-content-border;
+    // border-radius: 0 0 $global-radius $global-radius;
+    // border-bottom: $faq-accordion-content-border;
   }
 
   &:hover,
@@ -80,6 +85,7 @@ $faq-accordion-content-padding: 1rem !default;
     &::before {
       content: '+';
       position: absolute;
+      color: $dark-gray;
       #{$global-right}: 1rem;
       top: 50%;
       margin-top: -0.5rem;
@@ -87,6 +93,7 @@ $faq-accordion-content-padding: 1rem !default;
 
     .is-active > &::before {
       content: '–';
+      color: $dark-gray;
     }
   }
 }
@@ -105,20 +112,19 @@ $faq-accordion-content-padding: 1rem !default;
   }
 }
 
-@mixin foundation-faq-accordion {
-  .faq-accordion {
-    @include faq-accordion-container;
-  }
 
-  .faq-accordion-item {
-    @include faq-accordion-item;
-  }
+.faq-accordion {
+  @include faq-accordion-container;
+}
 
-  .faq-accordion-title {
-    @include faq-accordion-title;
-  }
+.faq-accordion-item {
+  @include faq-accordion-item;
+}
 
-  .faq-accordion-content {
-    @include faq-accordion-content;
-  }
+.faq-accordion-title {
+  @include faq-accordion-title;
+}
+
+.faq-accordion-content {
+  @include faq-accordion-content;
 }

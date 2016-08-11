@@ -61,6 +61,18 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
         This is where the content goes.
       </div>
     </li>
+    <li class="faq-accordion-item" data-accordion-item>
+      <a href="#" class="faq-accordion-title">Title</a>
+      <div class="faq-accordion-content" data-tab-content>
+        This is where the content goes.
+      </div>
+    </li>
+    <li class="faq-accordion-item" data-accordion-item>
+      <a href="#" class="faq-accordion-title">Title</a>
+      <div class="faq-accordion-content" data-tab-content>
+        This is where the content goes.
+      </div>
+    </li>
   </ul>
 
 

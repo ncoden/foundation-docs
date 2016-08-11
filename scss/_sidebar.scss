@@ -1,19 +1,24 @@
 // Contains the left sidebar: pinned pages, navigation, and the ad space.
 
 .docs-sidebar {
-    .docs-sidebar-label {
-        color: #B5B5B5;
-        font-size: 0.8rem;
-        display: inline;
-        vertical-align: bottom;
-    }
-    .docs-sidebar-collapse-button {
-        color: #B5B5B5;
-        font-size: 0.8rem;
-        display: inline;
-        float: right;
-        vertical-align: bottom;
-    }
+  .docs-sidebar-label {
+    color: #B5B5B5;
+    font-size: 0.8rem;
+    display: inline;
+    vertical-align: bottom;
+  }
+  .docs-sidebar-collapse-button {
+    color: #B5B5B5;
+    font-size: 0.8rem;
+    display: inline;
+    float: right;
+    vertical-align: bottom;
+  }
+
+  .sticky.is-stuck.is-at-top {
+    height: 40vh;
+    overflow: auto;
+  }
 }
 
 .docs-nav.menu {
@@ -68,9 +73,9 @@
   padding: 1rem 0.9rem 1rem 0;
   margin-top: 1rem;
 
-    &:first-child {
-      margin-top: 0;
-    }
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .docs-nav-version {
