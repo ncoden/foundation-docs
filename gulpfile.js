@@ -63,7 +63,7 @@ gulp.task('default', ['pages', 'sass', 'javascript'], function() {
     server: 'test/visual/_build'
   });
 
-  gulp.watch(['text/fixtures/**/*', 'test/visual/**/*.html'], ['pages']);
+  gulp.watch(['test/fixtures/**/*', 'test/visual/**/*.html'], ['pages']);
   gulp.watch(['scss/**/*', 'test/visual/docs.scss'], ['sass']);
   gulp.watch(['js/**/*'], ['javascript']);
 });
