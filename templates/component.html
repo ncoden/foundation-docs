@@ -33,7 +33,15 @@
       {{> building-blocks}}
       {{/if}}
 
+      <!-- NEW Examples component -->
+      <!-- @TODO: Need an if statement for when to show this -->
+      {{#if sass}}
+      <hr>
+      {{> examples}}
+      {{/if}}
 
+      <!-- Github Help Wanted + Recent Activity -->
+      <!-- @TODO: Need an if statement for when to show this -->
       <hr>
 
       <div class="row">
@@ -44,6 +52,7 @@
           {{> github-recent-activity}}
         </div>
       </div>
+      <!-- End Github components -->
 
     </div>
     {{!-- End container for docs --}}
