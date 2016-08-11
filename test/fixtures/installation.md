@@ -3,31 +3,33 @@ title: Installation
 description: There are many ways to install Foundation, but if you're just getting started, we have a few suggestions.
 ---
 
+<!-- NOTE: THIS TEMPLATE HAS PLACEHOLDER CONTENT AND IS NOT INTENDED FOR PRODUCTION -->
+
 <div class="row">
   <div class="medium-3 columns">
     <span class="subtitle">ZURB Recommendation</span>
     <h4>Command-Line Tool</h4>
     <p>Makes it easy to create new Foundation projects from the Terminal.</p>
-    <a href="#" class="button-docs expanded">Jump to Section</a>
+    <a href="#command-line-tool" class="button-docs expanded">Jump to Section</a>
   </div>
   <div class="medium-3 columns">
     <span class="subtitle">Basic</span>
     <h4>Manual Setup</h4>
     <p>Fastest way to install Foundation through a couple Terminal prompts. Comes with everything.</p>
-    <a href="#" class="button-docs secondary expanded">Jump to Section</a>
+    <a href="#manual-setup" class="button-docs secondary expanded">Jump to Section</a>
   </div>
   <div class="medium-3 columns">
     <span class="subtitle">Most Simple</span>
     <h4>CSS Download</h4>
     <p>Easiest for beginners, but doesn’t unlock all the features of the stack (like SCSS, live previews and page templates).</p>
-    <a href="#" class="button-docs secondary expanded">Download ZIP</a>
+    <a href="#css-download" class="button-docs secondary expanded">Jump to Section</a>
   </div>
   <div class="medium-3 columns">
     <h4>Other ways to install</h4>
     <ul>
-      <li><a href="#">CDN Links</a></li>
-      <li><a href="#">Package Managers</a></li>
-      <li><a href="#">Yeti Launch</a></li>
+      <li><a href="#cdn-links">CDN Links</a></li>
+      <li><a href="#package-managers">Package Managers</a></li>
+      <li><a href="#html-starter-template">HTML Starter Template</a></li>
     </ul>
   </div>
 </div>
@@ -35,12 +37,6 @@ description: There are many ways to install Foundation, but if you're just getti
 
 ---
 
-
-<!--## Yeti Launch-->
-
-<!--Yeti Launch is our Mac app for quickly spinning up blank projects for any of the three Foundation frameworks. If you're just getting started with Foundation, we recommend downloading Yeti Launch to get going right away.-->
-
-<!--<a href="http://foundation.zurb.com/develop/yeti-launch" class="large button">Download Yeti Launch</a>-->
 
 ### Command-Line Tool
 
@@ -57,20 +53,18 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
     </div>
   </div>
 
-  <!-- @TODO: This area should be put into the FAQ component -->
-  <!-- Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the command with `sudo` at the beginning:
 
-  ```bash
-  sudo npm install --global foundation-cli
-  ```
+  <ul class="faq-accordion indented" data-accordion>
+    <li class="faq-accordion-item is-active" data-accordion-item>
+      <a href="#" class="faq-accordion-title">Title</a>
+      <div class="faq-accordion-content" data-tab-content>
+        This is where the content goes.
+      </div>
+    </li>
+  </ul>
 
-  <div class="callout alert">
-  <p>If you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
 
-  <p>If you want to remove the old CLI, run <code>gem uninstall foundation</code>. After testing this new CLI, if you want to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
-  </div> -->
-
-  <div class="step">
+<div class="step">
   <h4 class="">Create a new Foundation project</h4>
   <div class="indented">
     Once you've installed the CLI, use the `new` command to start making a new project:
@@ -79,9 +73,9 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
     foundation new
     ```
   </div>
-  </div>
+</div>
 
-  <div class="step">
+<div class="step">
   <h4 class="">Run the project</h4>
   <div class="indented">
     Finally, run npm start to run the Sass compiler. It will re-run every time you save a Sass file. This command is something you’ll use every time you work on your project.
@@ -90,7 +84,7 @@ Not a fan of GUIs? The Node-powered Foundation CLI can install the same template
     npm start
     ```
   </div>
-  </div>
+</div>
 
 </div>
 

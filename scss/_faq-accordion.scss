@@ -1,0 +1,124 @@
+// This component is a stylized Foundation faq-accordion
+// It is mainly used on pages like Installation, where there are Question/Answer style errors
+
+/// Default background color of an faq-accordion group.
+/// @type Color
+$faq-accordion-background: $white !default;
+
+/// If `true`, adds plus and minus icons to the side of each faq-accordion title.
+/// @type Boolean
+$faq-accordion-plusminus: true !default;
+
+/// Default text color for items in a Menu.
+/// @type Color
+$faq-accordion-item-color: foreground($faq-accordion-background, $primary-color) !default;
+
+/// Default background color on hover for items in a Menu.
+/// @type Color
+$faq-accordion-item-background-hover: $light-gray !default;
+
+/// Default padding of an faq-accordion item.
+/// @type Number | List
+$faq-accordion-item-padding: 1.25rem 1rem !default;
+
+/// Default background color of tab content.
+/// @type Color
+$faq-accordion-content-background: $white !default;
+
+/// Default border color of tab content.
+/// @type Color
+$faq-accordion-content-border: 1px solid $light-gray !default;
+
+/// Default text color of tab content.
+/// @type Color
+$faq-accordion-content-color: foreground($faq-accordion-content-background, $body-font-color) !default;
+
+/// Default padding for tab content.
+/// @type Number | List
+$faq-accordion-content-padding: 1rem !default;
+
+/// Adds styles for an faq-accordion container. Apply this to the same element that gets `data-faq-accordion`.
+@mixin faq-accordion-container {
+  list-style-type: none;
+  background: $faq-accordion-background;
+  margin-#{$global-left}: 0;
+}
+
+/// Adds styles for the faq-accordion item. Apply this to the list item within an faq-accordion ul.
+@mixin faq-accordion-item {
+  &:first-child > :first-child {
+    border-radius: $global-radius $global-radius 0 0;
+  }
+
+  &:last-child > :last-child {
+    border-radius: 0 0 $global-radius $global-radius;
+  }
+}
+
+/// Adds styles for the title of an faq-accordion item. Apply this to the link within an faq-accordion item.
+@mixin faq-accordion-title {
+  display: block;
+  padding: $faq-accordion-item-padding;
+  line-height: 1;
+  font-size: rem-calc(12);
+  color: $faq-accordion-item-color;
+  position: relative;
+  border: $faq-accordion-content-border;
+  border-bottom: 0;
+
+  :last-child:not(.is-active) > & {
+    border-radius: 0 0 $global-radius $global-radius;
+    border-bottom: $faq-accordion-content-border;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $faq-accordion-item-background-hover;
+  }
+
+  @if $faq-accordion-plusminus {
+    &::before {
+      content: '+';
+      position: absolute;
+      #{$global-right}: 1rem;
+      top: 50%;
+      margin-top: -0.5rem;
+    }
+
+    .is-active > &::before {
+      content: '–';
+    }
+  }
+}
+
+/// Adds styles for faq-accordion content. Apply this to the content pane below an faq-accordion item's title.
+@mixin faq-accordion-content {
+  padding: $faq-accordion-content-padding;
+  display: none;
+  border: $faq-accordion-content-border;
+  border-bottom: 0;
+  background-color: $faq-accordion-content-background;
+  color: $faq-accordion-content-color;
+
+  :last-child > &:last-child {
+    border-bottom: $faq-accordion-content-border;
+  }
+}
+
+@mixin foundation-faq-accordion {
+  .faq-accordion {
+    @include faq-accordion-container;
+  }
+
+  .faq-accordion-item {
+    @include faq-accordion-item;
+  }
+
+  .faq-accordion-title {
+    @include faq-accordion-title;
+  }
+
+  .faq-accordion-content {
+    @include faq-accordion-content;
+  }
+}
