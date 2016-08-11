@@ -4,22 +4,39 @@
 // Next/Previous links
 .next-previous-links {
   width: 100%;
+  margin-bottom: 4rem;
 
   &:after {
     @include clearfix;
   }
 
+  span {
+    display: block;
+  }
+
   a {
     color: black;
+    font-size: rem-calc(18px);
   }
 
   .previous-page-link {
     display: inline-block;
+
+     a:before {
+       content: '\f108';
+       margin-right: 10px;
+     }
   }
 
   .next-page-link {
     float: right;
     display: inline-block;
+    text-align: right;
+
+      a:after {
+        content: '\f10b';
+        margin-left: 10px;
+      }
   }
 
   i {

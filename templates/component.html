@@ -5,7 +5,7 @@
   {{> header}}
 
   <div class="row">
-      {{> table-of-contents}}
+    {{> table-of-contents}}
   </div>
 
   <hr>
@@ -40,6 +40,13 @@
       {{> examples}}
       {{/if}}
 
+      <!-- NEW Related Resources component -->
+      <!-- @TODO: Need an if statement for when to show this -->
+      {{#if sass}}
+      <hr>
+      {{> related-resources}}
+      {{/if}}
+
       <!-- Github Help Wanted + Recent Activity -->
       <!-- @TODO: Need an if statement for when to show this -->
       <hr>
@@ -54,10 +61,29 @@
       </div>
       <!-- End Github components -->
 
-    </div>
-    {{!-- End container for docs --}}
+      <!-- NEW Next/Previous pages links -->
+      <!--
+      @TODO: Need an if statement for when to show this
+      Maybe #if hasNext == true?
+      -->
+      <hr>
+
+      <div class="next-previous-links">
+        <div class="previous-page-link">
+          <span class="subtitle">PREVIOUS</span>
+          <a href="#">Installation</a>
+        </div>
+        <div class="next-page-link">
+          <span class="subtitle">NEXT</span>
+          <a href="#">Buttons</a>
+        </div>
+      </div>
+      <!-- END Next/Previous page links -->
 
   </div>
-  {{!-- End container for docs and table of contents --}}
+  {{!-- End container for docs --}}
+
+</div>
+{{!-- End container for docs and table of contents --}}
 
 </article>
