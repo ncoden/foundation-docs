@@ -28,16 +28,17 @@
       {{> javascript-reference}}
       {{/if}}
 
-      {{#if sass}}
-      <hr>
-      {{> building-blocks}}
-      {{/if}}
-
       <!-- NEW Examples component -->
       <!-- @TODO: Need an if statement for when to show this -->
       {{#if sass}}
       <hr>
       {{> examples}}
+      {{/if}}
+
+      <!-- Existing Building Blocks component -->
+      {{#if sass}}
+      <hr>
+      {{> building-blocks}}
       {{/if}}
 
       <!-- NEW Related Resources component -->
