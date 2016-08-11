@@ -32,38 +32,7 @@
         </div>
       </div>
 
-      <header class="docs-header expanded row">
-        <div class="medium-2 columns">
-          <div class="docs-header-label">Foundation for Sites 6.0</div>
-        </div>
-
-        <div class="medium-7 columns">
-          <input type="text" class="docs-search" data-docs-search placeholder="Find a page, component, variable, mixin, function...">
-        </div>
-
-        <div class="medium-3 columns">
-          <div class="docs-header-buttons">
-            <a class="pin-button">
-              <i class="fi-clock"></i> Pin Page
-              <!-- if isPinned -->
-              <!-- x Unpin Page -->
-              <!-- end if isPinned -->
-            </a>
-
-            <div class="recently-viewed">
-              <a href="#">
-                <i class="fi-clock"></i> Recents</a>
-                <li class="recently-viewed-item">
-                  <a href="#">Item</a>
-                </li>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </header>
-
+      {{> docs-header}}
 
       <div class="expanded row">
         <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
