@@ -7,8 +7,10 @@
   display: block!important;
 
   .active {
-    background: $primary-color;
-    color: white;
+    background: white;
+    color: $primary-color;
+    padding: 5px 10px;
+    border-radius: 3px;
   }
 
   .menu .docs-nav-title {
@@ -42,7 +44,19 @@
     border: 1px solid #cacaca;
   }
 }
-// .docs-toc-wrap.is-stuck {
-//   max-height: calc(100vh - 1rem);
-//   overflow-y: auto;
-// }
+
+.docs-toc-wrap {
+  width: 100%;
+
+  &.is-stuck {
+    margin-top: 0!important;
+  }
+}
+
+.docs-toc-wrap.is-stuck .docs-toc {
+  // max-height: calc(100vh - 1rem);
+  // overflow-y: auto;
+  width: 100%;
+  margin: 0;
+  background: #F0F0F0;
+}
