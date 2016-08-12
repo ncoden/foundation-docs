@@ -21,6 +21,8 @@ header.docs-header {
     }
 
     .docs-header-buttons {
+        user-select: none;
+        
         @include breakpoint(medium up) {
             float: right;
         }
