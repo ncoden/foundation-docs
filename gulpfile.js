@@ -51,7 +51,12 @@ gulp.task('sass', function() {
     .pipe(browser.reload({ stream: true }));
 });
 
-gulp.task('javascript', function() {
+gulp.task('copy-foundation-js', function() {
+  gulp.src('node_modules/foundation-sites/dist/foundation.js')
+    .pipe(gulp.dest('test/visual/_build'));
+});
+
+gulp.task('javascript', ['copy-foundation-js'], function() {
   gulp.src('js/**/*.js')
     .pipe($.concat('docs.js'))
     .pipe(gulp.dest('test/visual/_build'));
