@@ -25,7 +25,7 @@ gulp.task('pages', function() {
     .pipe(panini({
       root: 'test/fixtures',
       layouts: 'test/visual',
-      partials: 'test/visual/partials'
+      partials: ['test/visual/partials', 'templates/partials']
     }))
     .pipe(gulp.dest('test/visual/_build'))
     .on('finish', function() {
