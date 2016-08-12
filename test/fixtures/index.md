@@ -8,7 +8,7 @@ tags:
 
 <div class="row">
   <div class="medium-6 columns">
-    <h2>Installing Foundation</h2>
+    <h2 id="installing-foundation">Installing Foundation</h2>
     <p>There are a number of ways to install Foundation for Sites. If you're just getting started, we recommend downloading Yeti Launch, which allows you to quickly set up starter projects with any Foundation framework. You can also install our Node CLI to do the same thing.</p>
     <p>It's also possible to manually install Foundation for Sites into your project through npm, Bower, Meteor, or Composer.</p>
     <a href="installation.html" class="large button">Install Foundation for Sites</a>
@@ -23,8 +23,8 @@ tags:
     </div> -->
   </div>
   <div class="medium-6 columns">
-    <h2>Learning Foundation</h2>
-    <h4>Learning the framework</h4>
+    <h2 id="learning-foundation">Learning Foundation</h2>
+    <h4>Understanding the framework</h4>
     <p>Getting used to Foundation is a breeze! The syntax of the framework is easy to understand, and the structure is consistent.</p>
 
     <div class="row up-1 medium-up-2 large-up-3 docs-big-index">
@@ -50,7 +50,7 @@ tags:
 
 <div class="row">
   <div class="medium-6 columns">
-    <h2>Documentation</h2>
+    <h2 id="documentation">Documentation</h2>
 
     <div class="flex-video widescreen">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/UVLINsAuFEI" frameborder="0" allowfullscreen></iframe>
@@ -78,7 +78,7 @@ tags:
     </ul>
   </div>
   <div class="medium-6 columns">
-    <h2>Most-viewed Pages</h2>
+    <h2 id="most-viewed-pages">Most-viewed Pages</h2>
     <!-- @TODO: Add real links -->
     <ul>
       <li>
