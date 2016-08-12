@@ -2,6 +2,13 @@
   .docs-video-default {
     .docs-video-trigger {}
   }
-  .docs-video-expanded {}
+  .docs-video-expanded {
+    display: none;
+
+    &.is-Visible {
+      display: block;
+    }
+
+  }
 
 }
