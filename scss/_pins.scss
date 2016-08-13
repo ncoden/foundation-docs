@@ -20,6 +20,10 @@
     background: $primary-color;
   }
 
+  &::before {
+    content: 'hi';
+  }
+
 } // end pin-button
 
 .pin-list {
