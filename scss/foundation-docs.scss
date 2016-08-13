@@ -1,29 +1,29 @@
 @import 'docs-variables';
 @import 'typography';
-@import 'buttons';
+@import 'header';
 @import 'footer';
 @import 'sidebar';
-@import 'newsletter';
+@import 'buttons';
 @import 'page';
 @import 'anchor';
 @import 'code';
 @import 'reference';
-@import 'color-block';
 @import 'index';
 @import 'building-blocks';
-@import 'header';
-@import 'compatibility';
 @import 'notices';
 @import 'topbar';
 @import 'toc';
 @import 'banner';
 @import 'label';
-@import 'studios-callout';
 @import 'announcement';
 @import 'pins';
 @import 'github-components';
 @import 'faq-accordion';
 @import 'video';
+@import 'newsletter';
+@import 'studios-callout';
+@import 'color-block';
+@import 'compatibility';
 @import 'wip';
 
 .menu-group {
@@ -47,7 +47,7 @@
 
 .docs-contribute-menu {
   font-size: rem-calc(14px);
-  margin-bottom: 0.75rem;
+  margin: 1rem auto 0.75rem;
 
   @include breakpoint(small only) {
     font-size: rem-calc(14);

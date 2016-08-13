@@ -1,35 +1,108 @@
 // Styles for the search bar and results list.
 
+
+
+// Fade in Up w Yeti
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+$docs-header-height: rem-calc(50px);
+
 header.docs-header {
   width: 100%;
-  padding: 0.75rem 0;
+  padding: 0;
   z-index: 10000;
+  border-bottom: 1px solid #EDEDED;
+  height: $docs-header-height;
+  position: relative;
 
+  // When the header is sticky
   &.sticky.is-stuck.is-at-top {
     background: white;
     margin-top: 0!important; // @TODO: Is there a way around this?
     top: 0;
     z-index: 1000;
+
+    // Move the mascot when stuck
+    .framework-mascot {
+      animation-name: fadeInUp;
+      animation-duration: 0.25s;
+      animation-fill-mode: both;
+    }
+
+    .docs-header-label {
+      margin-left: rem-calc(60px);
+    }
+
   }
+
+  .framework-mascot-container {
+    height: $docs-header-height;
+    width: rem-calc(60px);
+    overflow: hidden;
+    position: relative;
+
+    .framework-mascot {
+      height: $docs-header-height;
+      width: auto;
+      float: left;
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
 
   .docs-header-label {
     float: left;
+    display: inline-block;
+    @include vertical-center;
+
+    .gray {
+      color: $medium-gray;
+    }
+
+    .dark {
+      color: $dark-gray;
+      display: block;
+      margin-top: rem-calc(-4px);
+    }
   }
 
   input {
     float: left;
     width: 100%;
-    background: $light-gray;
-    border: 1px solid darken($medium-gray, 10%);
+    background: yellow;
+    border: 1px solid darken($light-gray, 10%);
     border-radius: rem-calc(2px);
+    box-shadow: 0px 1px 2px #cacaca inset;
+
+    &:focus {
+      box-shadow: 0px 1px 5px #cacaca inset;
+    }
 
     &::placeholder {
-      color: black;
+      color: $dark-gray;
     }
   }
 
   .docs-header-buttons {
     user-select: none;
+    position: relative;
+    height: $docs-header-height;
 
     @include breakpoint(medium up) {
       float: right;
@@ -44,14 +117,20 @@ header.docs-header {
     padding: 7px 15px;
     font-size: 13px;
     display: inline-block;
+    @include vertical-center;
 
     &:hover {
       background: #CACACA;
       cursor: pointer;
     }
+
+    &:active {
+      color: white;
+      background: $primary-color;
+    }
   }
 
-  .recently-viewed {
+  .pin-button, .recently-viewed {
     @extend .header-button;
     position: relative;
     z-index: 10000; // hacky
@@ -129,12 +208,16 @@ header.docs-header {
   }
 }
 
-
 .twitter-typeahead {
   display: inline-block;
-  position: relative;
+  position: absolute!important;
   width: 100%;
+  // height: $docs-header-height;
+  margin: 0 auto;
+  padding: 0;
+  @include vertical-center;
 
+  // Search icon
   &::before {
     content: '\f16c';
     display: block;
@@ -144,8 +227,10 @@ header.docs-header {
     z-index: 1;
     font-family: 'foundation-icons';
     font-size: 16px;
-    color: $primary-color;
+    color: $dark-gray;
   }
+
+
 }
 
 .docs-search:not(.tt-input),
@@ -153,9 +238,10 @@ header.docs-header {
 .tt-hint {
   right: 0;
   padding-left: 2.2rem;
-  margin-bottom: 0.5rem;
+  margin: 0 auto;
   box-shadow: none;
   border-width: 1px;
+  background: none!important; // Weird overrides were happening
   border-color: #E2E2E2;
   font-size: rem-calc(16px);
   height: rem-calc(34px);
