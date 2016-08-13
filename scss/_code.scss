@@ -4,8 +4,19 @@
 $docs-code-padding: 1rem;
 $docs-code-border-color: #DEDEDE;
 
+// Custom Font
+// via https://github.com/adobe-fonts/source-code-pro
+@font-face{
+	font-family: 'SourceCodePro';
+	src: url('../assets/fonts/source-code-pro/SourceCodePro-Regular.eot');
+	src: url('../assets/fonts/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('../assets/fonts/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+	     url('../assets/fonts/source-code-pro/SourceCodePro-Regular.ttf') format('truetype'),
+	     url('WebFont.svg#webfont') format('svg');
+}
+
 code {
-    font-family: "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
+    font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace;
     color: #0a0a0a;
     background-color: #f5f5f5;
     border: 1px solid #cacaca;
