@@ -1,191 +1,200 @@
 // Styles for the search bar and results list.
 
 header.docs-header {
+  width: 100%;
+  padding: 0.75rem 0;
+
+  &.sticky.is-stuck.is-at-top {
+    background: white;
+    margin-top: 0!important; // @TODO: Is there a way around this?
+    top: 0;
+    z-index: 1000;
+  }
+
+  .docs-header-label {
+    float: left;
+  }
+
+  input {
+    float: left;
     width: 100%;
-    padding: 0.75rem 0;
+    background: $light-gray;
+    border: 1px solid darken($medium-gray, 10%);
+    border-radius: rem-calc(2px);
 
-    &.sticky.is-stuck.is-at-top {
-      background: white;
-      margin-top: 0!important; // @TODO: Is there a way around this?
-      top: 0;
-      z-index: 1000;
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  .docs-header-buttons {
+    user-select: none;
+
+    @include breakpoint(medium up) {
+      float: right;
+    }
+  }
+
+  .header-button {
+    color: #757575;
+    background: #e4e4e4;
+    border-radius: 3px;
+    height: auto;
+    padding: 7px 15px;
+    font-size: 13px;
+    display: inline-block;
+
+    &:hover {
+      background: #CACACA;
+      cursor: pointer;
+    }
+  }
+
+  .recently-viewed {
+    @extend .header-button;
+
+    .recently-viewed-items {
+      display: none;
     }
 
-    .docs-header-label {
-        float: left;
+    .recently-viewed-items.is-Visible {
+      display: block;
     }
 
-    input {
-        float: left;
-        width: 100%;
-        background: $light-gray;
-        border: 1px solid darken($medium-gray, 10%);
-        border-radius: rem-calc(2px);
-
-        &::placeholder {
-          color: black;
-        }
+    .recently-viewed-item {
+      display: none;
     }
-
-    .docs-header-buttons {
-        user-select: none;
-
-        @include breakpoint(medium up) {
-            float: right;
-        }
-    }
-
-    .header-button {
-        color: #757575;
-        background: #e4e4e4;
-        border-radius: 3px;
-        height: auto;
-        padding: 7px 15px;
-        font-size: 13px;
-        display: inline-block;
-
-        &:hover {
-            background: #CACACA;
-        }
-    }
-
-    .recently-viewed {
-        @extend .header-button;
-
-        .recently-viewed-item {
-            display: none;
-        }
-    }
+  }
 }
 
 
 .twitter-typeahead {
-    display: inline-block;
-    position: relative;
-    width: 100%;
+  display: inline-block;
+  position: relative;
+  width: 100%;
 
-    &::before {
-        content: '\f16c';
-        display: block;
-        position: absolute;
-        top: 0.4rem;
-        left: 0.9rem;
-        z-index: 1;
-        font-family: 'foundation-icons';
-        font-size: 16px;
-        color: $primary-color;
-    }
+  &::before {
+    content: '\f16c';
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.9rem;
+    z-index: 1;
+    font-family: 'foundation-icons';
+    font-size: 16px;
+    color: $primary-color;
+  }
 }
 
 .docs-search:not(.tt-input),
 .tt-input,
 .tt-hint {
-    right: 0;
-    padding-left: 2.2rem;
-    margin-bottom: 0.5rem;
+  right: 0;
+  padding-left: 2.2rem;
+  margin-bottom: 0.5rem;
+  box-shadow: none;
+  border-width: 1px;
+  border-color: #E2E2E2;
+  font-size: rem-calc(16px);
+  height: rem-calc(34px);
+  font-weight: 300;
+
+  &:hover {
     box-shadow: none;
-    border-width: 1px;
-    border-color: #E2E2E2;
-    font-size: rem-calc(16px);
-    height: rem-calc(34px);
-    font-weight: 300;
+  }
 
-    &:hover {
-        box-shadow: none;
-    }
-
-    &:focus {
-        border-color: #AFAFAF;
-        box-shadow: none;
-    }
+  &:focus {
+    border-color: #AFAFAF;
+    box-shadow: none;
+  }
 }
 
 .tt-menu {
-    background: white;
-    width: 100%;
-    border: 1px solid #ccc;
+  background: white;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
 .tt-suggestion {
-    @include clearfix;
-    padding: 0.5rem;
+  @include clearfix;
+  padding: 0.5rem;
 
-    &:hover,
-    &.tt-cursor {
-        background: $primary-color;
-        color: #fff;
-        cursor: pointer;
-        border-radius: rem-calc(3px);
-
-        .meta {
-            color: #fff;
-        }
-    }
-
-    &:active {
-        background: darken($primary-color, 5%);
-        color: #fff;
-        cursor: pointer;
-
-        .meta {
-            color: #fff;
-        }
-    }
-
-    .name {
-        font-weight: bold;
-        font-size: rem-calc(16px);
-    }
+  &:hover,
+  &.tt-cursor {
+    background: $primary-color;
+    color: #fff;
+    cursor: pointer;
+    border-radius: rem-calc(3px);
 
     .meta {
-        text-transform: uppercase;
-        font-size: rem-calc(10px);
-        letter-spacing: rem-calc(0.4px);
-        color: $dark-gray;
-        // margin-left: 0.5rem;
-        display: block;
+      color: #fff;
+    }
+  }
+
+  &:active {
+    background: darken($primary-color, 5%);
+    color: #fff;
+    cursor: pointer;
+
+    .meta {
+      color: #fff;
+    }
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: rem-calc(16px);
+  }
+
+  .meta {
+    text-transform: uppercase;
+    font-size: rem-calc(10px);
+    letter-spacing: rem-calc(0.4px);
+    color: $dark-gray;
+    // margin-left: 0.5rem;
+    display: block;
+  }
+
+  .desc {
+    font-size: rem-calc(14px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0.25rem 0.5rem;
+
+    .name {
+      float: left;
+      width: 40%;
     }
 
     .desc {
-        font-size: rem-calc(14px);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      // float: left;
+      width: 60%;
     }
-
-    @include breakpoint(medium) {
-        padding: 0.25rem 0.5rem;
-
-        .name {
-            float: left;
-            width: 40%;
-        }
-
-        .desc {
-            // float: left;
-            width: 60%;
-        }
-    }
+  }
 }
 
 .tt-open {
   margin-top: rem-calc(-9px);
 
   @include breakpoint(medium up) {
-      padding: 0.4rem;
-      box-shadow: 0 4px 6px rgba(#000, 0.15);
+    padding: 0.4rem;
+    box-shadow: 0 4px 6px rgba(#000, 0.15);
   }
 }
 
 .tt-empty {
-    padding: 1rem;
+  padding: 1rem;
 
-    &:before {
-        content: ':(';
-        font-weight: bold;
-        font-size: 2rem;
-        color: #999;
-        margin-left: 1rem;
-        margin-right: 2rem;
-    }
+  &:before {
+    content: ':(';
+    font-weight: bold;
+    font-size: 2rem;
+    color: #999;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
 }
