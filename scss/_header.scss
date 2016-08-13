@@ -3,6 +3,7 @@
 header.docs-header {
   width: 100%;
   padding: 0.75rem 0;
+  z-index: 10000;
 
   &.sticky.is-stuck.is-at-top {
     background: white;
@@ -52,18 +53,63 @@ header.docs-header {
 
   .recently-viewed {
     @extend .header-button;
+    position: relative;
+    z-index: 10000; // hacky
+  }
 
-    .recently-viewed-items {
-      display: none;
-    }
+  .recently-viewed-items {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    width: rem-calc(220px);
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    background: #CACACA;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.41);
 
-    .recently-viewed-items.is-Visible {
+    &.is-Visible {
       display: block;
+      position: absolute;
+      top: 2.75rem;
+      right: 0;
+      width: rem-calc(220px);
+      z-index: 10000;
+
+      // Display the items when button is clicked
+      .recently-viewed-item {
+        display: block;
+        padding: 5px 0;
+        width: 100%;
+        padding: rem-calc(10px 15px);
+
+        a {
+          color: black;
+        }
+
+        &:hover {
+          background: darken(#CACACA, 10%);
+        }
+      }
     }
 
-    .recently-viewed-item {
-      display: none;
+    &:before {
+      position: absolute;
+      top: rem-calc(-8px);
+      right: 0;
+      content:"\A";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: rem-calc(0 8px 8px 8px);
+      border-color: transparent transparent #CACACA transparent;
     }
+
+  }
+
+  // Hide the items until button is clicked
+  .recently-viewed-item {
+    display: none;
   }
 }
 
