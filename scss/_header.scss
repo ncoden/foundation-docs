@@ -57,6 +57,9 @@ header.docs-header {
     z-index: 10000; // hacky
   }
 
+
+  $recently-viewed-border-color: #e2e2e2;
+
   .recently-viewed-items {
     display: none;
     position: absolute;
@@ -65,8 +68,9 @@ header.docs-header {
     width: rem-calc(220px);
     border-radius: 3px;
     border-top-right-radius: 0;
-    background: #CACACA;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.41);
+    background: #fff;
+    border: 1px solid $recently-viewed-border-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
 
     &.is-Visible {
       display: block;
@@ -79,16 +83,28 @@ header.docs-header {
       // Display the items when button is clicked
       .recently-viewed-item {
         display: block;
-        padding: 5px 0;
         width: 100%;
-        padding: rem-calc(10px 15px);
+        position: relative;
+        border-top: 1px solid $recently-viewed-border-color;
+        border-bottom: 1px solid $recently-viewed-border-color;
 
-        a {
-          color: black;
+        &:first-child {
+          border-top: 0;
+        }
+        &:last-child {
+          border-bottom: 0;
         }
 
         &:hover {
-          background: darken(#CACACA, 10%);
+          background: darken(#fff, 10%);
+        }
+
+        a {
+          color: black;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: rem-calc(10px 15px);
         }
       }
     }
@@ -102,7 +118,7 @@ header.docs-header {
       height: 0;
       border-style: solid;
       border-width: rem-calc(0 8px 8px 8px);
-      border-color: transparent transparent #CACACA transparent;
+      border-color: transparent transparent $recently-viewed-border-color transparent;
     }
 
   }
