@@ -21,7 +21,7 @@
   }
 
   &::before {
-    content: 'hi';
+    content: url('../assets/icons/pin.svg');
   }
 
 } // end pin-button
