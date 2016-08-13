@@ -4,6 +4,13 @@ header.docs-header {
     width: 100%;
     padding: 0.75rem 0;
 
+    &.sticky.is-stuck.is-at-top {
+      background: white;
+      margin-top: 0!important; // @TODO: Is there a way around this?
+      top: 0;
+      z-index: 1000;
+    }
+
     .docs-header-label {
         float: left;
     }
@@ -22,7 +29,7 @@ header.docs-header {
 
     .docs-header-buttons {
         user-select: none;
-        
+
         @include breakpoint(medium up) {
             float: right;
         }
