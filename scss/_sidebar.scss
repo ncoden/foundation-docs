@@ -18,8 +18,8 @@
   }
 
   &.sticky.is-stuck.is-at-top {
-    height: 60vh;
-    overflow: auto;
+    // height: 60vh;
+    // overflow: auto;
     margin-top: $docs-header-height!important; // was being overridden in HTML
   }
 }
