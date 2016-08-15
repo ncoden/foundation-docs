@@ -7,14 +7,6 @@
   display: block!important;
   border: 1px solid transparent;
 
-  .active {
-    background: white;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-    padding: 5px 10px;
-    border-radius: 3px;
-  }
-
   .menu .docs-nav-title {
     margin-top: 0;
     border-top: 0;
@@ -25,6 +17,7 @@
   ul {
     padding: 0;
     margin: 0;
+    list-style: none;
   }
 
   li {
@@ -66,5 +59,17 @@
   margin-top: $docs-header-height;
   background: #F0F0F0;
   box-shadow: 2px 3px 5px 0px rgba(145, 145, 145, 0.62);
-  padding: rem-calc(5px 15px);
+  padding: rem-calc(2px 15px);
+
+    .subtitle {
+      display: none;
+    }
+
+    .active {
+      background: white;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
 }
