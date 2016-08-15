@@ -35,6 +35,21 @@
 
   .pin-list-item {
 
+    &:hover {
+      background: #595f63;
+      color: white;
+    }
+
+    a {
+      display: block;
+      padding: rem-calc(10px 5px);
+      color: $dark-gray;
+
+      &:hover {
+        color: white
+      }
+    }
+
     & a:before {
       content: '\f2a6';
       color: $dark-gray;
