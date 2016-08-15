@@ -1,12 +1,44 @@
 .docs-video {
-  .docs-video-default {
-    .docs-video-trigger {}
+
+  .docs-video-trigger {
+    display: inline-block;
+    position: relative;
+    padding: rem-calc(10px 15px);
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 90%;
+
+    &:hover {
+      cursor: pointer;
+      // background: red;
+    }
   }
+
   .docs-video-expanded {
     display: none;
 
     &.is-Visible {
       display: block;
+    }
+
+  }
+
+  .docs-video-left {
+    float: left;
+    display: inline-block;
+    @include vertical-center;
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  .docs-video-right {
+    margin-left: 2.25rem;
+
+    span {
+      display: block;
+      margin-top: -4px;
     }
 
   }

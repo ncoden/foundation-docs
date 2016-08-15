@@ -103,13 +103,9 @@ $faq-accordion-content-padding: 1rem !default;
   padding: $faq-accordion-content-padding;
   display: none;
   border: $faq-accordion-content-border;
-  border-bottom: 0;
   background-color: $faq-accordion-content-background;
   color: $faq-accordion-content-color;
-
-  :last-child > &:last-child {
-    border-bottom: $faq-accordion-content-border;
-  }
+  border-bottom: $faq-accordion-content-border;
 }
 
 
