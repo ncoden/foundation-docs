@@ -3,7 +3,7 @@
 .docs-sidebar {
   margin-top: 1rem;
   border-right: 1px solid #f1f1f1;
-  padding-right: 5px;
+  // padding-right: 5px;
 
   .docs-sidebar-label {
     color: #B5B5B5;
@@ -54,7 +54,9 @@
   }
 
   .current a {
-    background: rgba(#000, 0.05);
+    color: #000;
+    background: scale-color($primary-color, $saturation:-70%, $lightness: 90%);
+    border-right: 1px solid scale-color($primary-color, $saturation:-70%, $lightness: 20%);
   }
 
   .label {

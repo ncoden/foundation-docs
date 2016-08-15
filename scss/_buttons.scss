@@ -27,3 +27,35 @@
     background: #cacaca;
   }
 }
+
+.icon-buttons-docs {
+
+  li {
+    list-style: none;
+    text-align: left;
+
+    @include breakpoint(medium up) {
+      text-align: center;
+    }
+  }
+
+  li a {
+    padding: rem-calc(10px 15px);
+    color: scale-color($primary-color, $saturation:-70%, $lightness: 20%);
+    background: scale-color($primary-color, $saturation:-70%, $lightness: 90%);
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: rem-calc(15px);
+  }
+
+  i {
+    display: inline-block;
+
+    @include breakpoint(medium up) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+}

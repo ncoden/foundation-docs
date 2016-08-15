@@ -78,32 +78,48 @@ tags:
     </ul>
   </div>
   <div class="medium-6 columns">
-    <h2 id="most-viewed-pages">Most-viewed Pages</h2>
+    <h3 id="most-viewed-pages">Most-viewed Pages</h3>
     <!-- @TODO: Add real links -->
-    <ul>
-      <li>
-        <a href="#">Grid</a>
+    <ul class="icon-buttons-docs row small-up-2 medium-up-2 large-up-4" data-equalizer data-equalize-on="medium">
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i> Grid
+        </a>
       </li>
-      <li>
-        <a href="#">Buttons &amp; Controls</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i> Buttons &amp; Controls
+        </a>
       </li>
-      <li>
-        <a href="#">Navigation</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i> Navigation
+        </a>
       </li>
-      <li>
-        <a href="#">Forms</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i> Forms
+        </a>
       </li>
-      <li>
-        <a href="#">Typography</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i> Typography
+        </a>
       </li>
-      <li>
-        <a href="#">Sass</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i>Sass
+        </a>
       </li>
-      <li>
-        <a href="#">Top Bar</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i>Top Bar
+        </a>
       </li>
-      <li>
-        <a href="#">Abide</a>
+      <li class="column">
+        <a href="#" data-equalizer-watch>
+          <i class="fi-plus"></i>Abide
+        </a>
       </li>
     </ul>
   </div>
