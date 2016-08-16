@@ -11,11 +11,11 @@ $faq-accordion-plusminus: true !default;
 
 /// Default text color for items in a Menu.
 /// @type Color
-$faq-accordion-item-color: foreground($faq-accordion-background, $primary-color) !default;
+$faq-accordion-item-color: $docs-scaled-color-8;
 
 /// Default background color on hover for items in a Menu.
 /// @type Color
-$faq-accordion-item-background-hover: $light-gray !default;
+$faq-accordion-item-background-hover: $docs-scaled-color-2 !default;
 
 /// Default padding of an faq-accordion item.
 /// @type Number | List
@@ -27,7 +27,7 @@ $faq-accordion-content-background: $white !default;
 
 /// Default border color of tab content.
 /// @type Color
-$faq-accordion-content-border: 1px solid $light-gray !default;
+$faq-accordion-content-border: 1px solid $docs-scaled-color-4 !default;
 
 /// Default text color of tab content.
 /// @type Color
@@ -48,6 +48,7 @@ $faq-accordion-content-padding: 1rem !default;
 /// Adds styles for the faq-accordion item. Apply this to the list item within an faq-accordion ul.
 @mixin faq-accordion-item {
   margin: 0.5rem auto;
+  background: $docs-scaled-color-1;
 
   // &:first-child > :first-child {
   //   border-radius: $global-radius $global-radius 0 0;
@@ -63,13 +64,12 @@ $faq-accordion-content-padding: 1rem !default;
   display: block;
   padding: $faq-accordion-item-padding;
   line-height: 1;
-  font-size: rem-calc(12);
+  // font-size: rem-calc(14);
   color: $faq-accordion-item-color;
   position: relative;
   border: $faq-accordion-content-border;
   // border-bottom: 0;
   border-radius: 2px;
-  color: black;
 
   :last-child:not(.is-active) > & {
     // border-radius: 0 0 $global-radius $global-radius;
@@ -78,8 +78,10 @@ $faq-accordion-content-padding: 1rem !default;
 
   &:hover,
   &:focus {
+    color: $docs-scaled-color-10;
     background-color: $faq-accordion-item-background-hover;
   }
+
 
   @if $faq-accordion-plusminus {
     &::before {
@@ -106,6 +108,7 @@ $faq-accordion-content-padding: 1rem !default;
   background-color: $faq-accordion-content-background;
   color: $faq-accordion-content-color;
   border-bottom: $faq-accordion-content-border;
+  border-top: none;
 }
 
 
