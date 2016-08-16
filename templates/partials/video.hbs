@@ -10,9 +10,14 @@
     </div>
   </div>
   <!-- When video button is clicked: -->
-  <div class="docs-video-expanded" id="docs-video-expanded" data-toggler=".is-Visible">
-    <div class="flex-video widescreen">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/UVLINsAuFEI" frameborder="0" allowfullscreen></iframe>
+  <div class="docs-video-expanded" id="docs-video-expanded" data-toggler=".is-Visible" data-closable data-sticky-container>
+    <div class="docs-video-inner" data-sticky data-anchor="docs" data-sticky-on="large">
+      <button class="close-button" data-close>&times;</button>
+      <div class="flex-video widescreen">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UVLINsAuFEI" frameborder="0" allowfullscreen></iframe>
+        <span data-toggle="docs-video-expanded">Pin to side</span>
+        <!-- <span id="docs-video-expanded" data-toggler=".is-Visible"></span> -->
+      </div>
     </div>
   </div>
 </div>

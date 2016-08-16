@@ -28,3 +28,13 @@
 .docs-component .callout code {
   background: rgba($code-background, 0.5);
 }
+
+
+// Content Blocks (like the Templates and Examples)
+.docs-grid-content-block {
+  margin-bottom: 20px;
+
+  h5 {
+    margin-top: rem-calc(10px);
+  }
+}
