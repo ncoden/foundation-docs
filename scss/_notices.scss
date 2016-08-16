@@ -24,24 +24,25 @@
 }
 
 // Callouts
-.callout {
-    margin: 0 0 1rem 0;
-    padding: 0.5rem 1rem;
-    border: 0;
-    border-left: 3px solid #FFDD5E;
-    border-radius: 0;
-    position: relative;
-    color: #0a0a0a;
-    background-color: white;
-}
-
-.callout.primary {
-    @extend .callout;
-    background-color: white;
-    border-color: #FFDD5E;
-
-    &:before {
-      content: 'Heads up!';
-      color: #8F8F8F;
-    }
-}
+// TODO: Create a Docs-specific version of these
+// .callout {
+//     margin: 0 0 1rem 0;
+//     padding: 0.5rem 1rem;
+//     border: 0;
+//     border-left: 3px solid #FFDD5E;
+//     border-radius: 0;
+//     position: relative;
+//     color: #0a0a0a;
+//     background-color: white;
+// }
+//
+// .callout.primary {
+//     @extend .callout;
+//     background-color: white;
+//     border-color: #FFDD5E;
+//
+//     &:before {
+//       content: 'Heads up!';
+//       color: #8F8F8F;
+//     }
+// }

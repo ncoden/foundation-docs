@@ -1,8 +1,10 @@
 // Styles for code examples are here.
 
 // Variables
-$docs-code-padding: 1rem;
+$docs-code-padding: 1.5rem;
 $docs-code-border-color: #DEDEDE;
+$docs-code-saturation: 10%;
+$docs-code-lightness: 20%;
 
 // Custom Font
 // via https://github.com/adobe-fonts/source-code-pro
@@ -15,6 +17,7 @@ $docs-code-border-color: #DEDEDE;
 	     url('WebFont.svg#webfont') format('svg');
 }
 
+// The inline code snippets
 code {
     font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace;
     color: #0a0a0a;
@@ -35,11 +38,11 @@ code {
 pre {
   position: relative;
 
-  // Light Code UI
+  // Standard Code UI
   code {
     display: block;
     overflow-x: auto;
-		background: scale-color(#2c3840, $saturation: -70%, $lightness: 5% );
+		background: scale-color(#0c2935, $saturation: 0%, $lightness: 10%);
     border: 0;
     border-top: none;
     padding: $docs-code-padding;
@@ -72,8 +75,9 @@ pre {
 
 // Dark Code UI
 .docs-code .bash {
-  background: #444444;
-  color: $docs-green;
+  color: #000;
+	border-color: #000;
+	background: #fff;
   position: relative;
 
   &::before {
@@ -198,7 +202,7 @@ li code,
 /* Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #c3c3c3;
+  color: #a4a4a4;
 }
 
 /* Framework Color */
@@ -206,11 +210,11 @@ li code,
 .hljs-template-variable,
 .hljs-tag,
 .hljs-name,
-.hljs-selector-id,
+.hljs-selector-id,x
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: scale-color($primary-color, $saturation: -50%, $lightness: 10% );
+  color: scale-color($primary-color, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Terminal Commands */
@@ -222,12 +226,12 @@ li code,
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: #5fbfde;
+  color: scale-color(#18b9f6, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Yellow */
 .hljs-attribute {
-  color: #f0c674;
+  color: scale-color(#f0c674, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Green */
@@ -235,25 +239,26 @@ li code,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #b5bd68;
+  color: scale-color(#b7d500, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	// b5bd68
 }
 
 /* Tomorrow Blue */
 .hljs-title,
 .hljs-section {
-  color: #81a2be;
+  color: scale-color(#81a2be, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #b294bb;
+  color: scale-color(#b294bb, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #1d1f21;
+  background: scale-color(#1d1f21, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
   color: #c5c8c6;
   padding: 0.5em;
 }
