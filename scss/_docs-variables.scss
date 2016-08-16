@@ -2,3 +2,22 @@
 $docs-green:#B8E986;
 $docs-yellow: #FFDD5E;
 $docs-red: #FF5E5E;
+
+$docs-gray-1: ;
+$docs-gray-2: ;
+$docs-gray-3: ;
+$docs-gray-4: ;
+$docs-gray-5: ;
+
+// Scaled primary color
+// 1 is lightest, 5 is darkest
+$docs-scaled-color-1: scale-color($primary-color, $saturation:-80%, $lightness: 90%);
+$docs-scaled-color-2: scale-color($primary-color, $saturation:-80%, $lightness: 85%);
+$docs-scaled-color-3: scale-color($primary-color, $saturation:-80%, $lightness: 80%);
+$docs-scaled-color-4: scale-color($primary-color, $saturation:-70%, $lightness: 70%);
+$docs-scaled-color-5: scale-color($primary-color, $saturation:-70%, $lightness: 60%);
+$docs-scaled-color-6: scale-color($primary-color, $saturation:-70%, $lightness: 50%);
+$docs-scaled-color-7: scale-color($primary-color, $saturation:-70%, $lightness: 40%);
+$docs-scaled-color-8: scale-color($primary-color, $saturation:-70%, $lightness: 30%);
+$docs-scaled-color-9: scale-color($primary-color, $saturation:-70%, $lightness: 15%);
+$docs-scaled-color-10: scale-color($primary-color, $saturation:-70%, $lightness: 0%);

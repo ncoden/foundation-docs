@@ -1,7 +1,5 @@
 <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns" >
   <div class="docs-sidebar">
-    <div class="docs-sidebar-label">PAGES</div>
-    <div class="docs-sidebar-collapse-button">Collapse All</div>
 
     <div class="pin-list" data-pin-list>
       <div class="pin-list-item">
@@ -9,9 +7,19 @@
       </div>
     </div>
 
+    <div class="pin-button" data-pin-page>
+      Add Page to sidebar
+      <!-- if isPinned -->
+      <!-- x Remove from sidebar -->
+      <!-- end if isPinned -->
+    </div>
+
+    <div class="docs-sidebar-label">PAGES</div>
+    <span class="docs-sidebar-collapse-button">Collapse All</span>
+
     <ul class="vertical menu docs-nav" id="docs-menu">
       {{> component-list}}
     </ul>
-  </div>
 
+  </div>
 </div>

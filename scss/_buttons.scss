@@ -41,8 +41,8 @@
 
   li a {
     padding: rem-calc(10px 15px);
-    color: scale-color($primary-color, $saturation:-70%, $lightness: 20%);
-    background: scale-color($primary-color, $saturation:-70%, $lightness: 90%);
+    color: $docs-scaled-color-10;
+    background: $docs-scaled-color-2;
     display: block;
     width: 100%;
     border-radius: 2px;

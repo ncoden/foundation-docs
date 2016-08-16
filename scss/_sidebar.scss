@@ -55,8 +55,8 @@
 
   .current a {
     color: #000;
-    background: scale-color($primary-color, $saturation:-70%, $lightness: 90%);
-    border-right: 1px solid scale-color($primary-color, $saturation:-70%, $lightness: 20%);
+    background: $docs-scaled-color-1;
+    border-right: 1px solid $docs-scaled-color-5;
   }
 
   .label {

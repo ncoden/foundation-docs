@@ -18,8 +18,8 @@ $docs-code-border-color: #DEDEDE;
 code {
     font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace;
     color: #0a0a0a;
-    background-color: #f5f5f5;
-    border: 1px solid #cacaca;
+    background-color: $docs-scaled-color-1;
+    border: 1px solid $docs-scaled-color-4;
     padding: 0.125rem 0.3125rem 0.0625rem;
 }
 
@@ -39,7 +39,7 @@ pre {
   code {
     display: block;
     overflow-x: auto;
-		background: scale-color(#2c3840, $saturation: -70%, $lightness: 10% );
+		background: scale-color(#2c3840, $saturation: -70%, $lightness: 5% );
     border: 0;
     border-top: none;
     padding: $docs-code-padding;
@@ -190,6 +190,10 @@ li code,
 /* Code Theme: ZURB */
 /* Original: Tomorrow Night Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+// More themes: https://github.com/isagalaev/highlight.js/tree/master/src/styles
+// And their examples: https://highlightjs.org/static/demo/
+
 
 /* Comment */
 .hljs-comment,
