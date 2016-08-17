@@ -251,6 +251,7 @@ header.docs-header {
   font-size: rem-calc(15px);
   height: rem-calc(34px);
   font-weight: 300;
+  // margin-top: $docs-header-height;
 
   &:hover {
     box-shadow: none;
@@ -268,6 +269,7 @@ header.docs-header {
   border: 1px solid #ccc;
 }
 
+// Result items
 .tt-suggestion {
   @include clearfix;
   padding: 0.5rem;
@@ -334,6 +336,7 @@ header.docs-header {
   margin-top: rem-calc(-9px);
 
   @include breakpoint(medium up) {
+    margin-top: -1px;
     padding: 0.4rem;
     box-shadow: 0 4px 6px rgba(#000, 0.15);
   }

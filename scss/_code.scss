@@ -2,9 +2,9 @@
 
 // Variables
 $docs-code-padding: 1.5rem;
-$docs-code-border-color: #DEDEDE;
+$docs-code-border-color: #dbdbdb;
 $docs-code-saturation: 10%;
-$docs-code-lightness: 20%;
+$docs-code-lightness: 50%;
 
 // Custom Font
 // via https://github.com/adobe-fonts/source-code-pro
@@ -47,6 +47,12 @@ pre {
     border-top: none;
     padding: $docs-code-padding;
 		color: white;
+		// opacity: 0.1;
+		// transition: all 100ms ease-in-out;
+		//
+		// &:hover {
+		// 	opacity: 1;
+		// }
 
 		// Selected text
 		&::selection, span::selection {
