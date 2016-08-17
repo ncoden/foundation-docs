@@ -4,12 +4,24 @@
 
     <div class="medium-2 columns">
       <div class="framework-mascot-container">
-        <img src="assets/img/yeti.svg" class="framework-mascot" data-pin-nopin="true" />
+        {{#ifequal global.framework.type 'sites' }}
+          <img src="assets/img/yeti.svg" class="framework-mascot" data-pin-nopin="true" />
+        {{/ifequal}}
+        {{#ifequal global.framework.type 'emails' }}
+          <img src="assets/img/inky-class.png" class="framework-mascot" data-pin-nopin="true" />
+        {{/ifequal}}
       </div>
 
       <div class="docs-header-label">
         <a href="index.html">
-          <span class="gray">Foundation</span><span class="dark">for Sites 6.0</span>
+          {{#if global}}
+            {{#ifequal global.framework.type 'sites' }}
+              <span class="gray">Foundation</span><span class="dark">for Sites {{global.framework.version}}</span>
+            {{/ifequal}}
+            {{#ifequal global.framework.type 'emails' }}
+              <span class="gray">Foundation</span><span class="dark">for Emails {{global.framework.version}}</span>
+            {{/ifequal}}
+          {{/if}}
         </a>
       </div>
     </div>

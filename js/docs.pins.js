@@ -3,7 +3,9 @@ if (typeof(window.FoundationDocs.Pins) === 'undefined') { window.FoundationDocs.
 
 var FoundationDocs = window.FoundationDocs;
 !(function() {
-  var storageName = 'FOUNDATION_PINS';
+  var storageNameBase = 'FOUNDATION_PINS';
+  var siteType = $('.docs-component').data().framework;
+  var storageName = storageNameBase + "_" + siteType;
 
   FoundationDocs.Pins.storePins = function(pins) {
     localStorage.setItem(storageName, JSON.stringify(pins));

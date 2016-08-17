@@ -3,7 +3,9 @@ if (typeof(window.FoundationDocs.RecentViews) === 'undefined') { window.Foundati
 
 var FoundationDocs = window.FoundationDocs;
 !(function() {
-  var storageName = 'FOUNDATION_RECENT_VIEWS';
+  var storageNameBase = 'FOUNDATION_RECENT_VIEWS';
+  var siteType = $('.docs-component').data().framework;
+  var storageName = storageNameBase + "_" + siteType;
   var maxLength = 5;
 
   FoundationDocs.RecentViews.storeViews = function(views) {
