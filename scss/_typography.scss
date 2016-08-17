@@ -23,13 +23,21 @@ a > code {
   color: $primary-color;
 }
 
-
 .subtitle {
   color: #848484;
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+
+h1.docs-heading {
+}
+h2.docs-heading {
+  font-weight: 300;
+}
+h3.docs-heading {}
+h4.docs-heading {}
+h5.docs-heading {}
 
 p,
 li,
