@@ -14,12 +14,12 @@ var FoundationDocs = window.FoundationDocs;
   };
 
   FoundationDocs.RecentViews.addCurrent = function() {
-    var name = $('h1').text();
+    var name = $('h1:first').text();
     var url = window.location.href;
     FoundationDocs.RecentViews.clearView(name);
     var views = FoundationDocs.RecentViews.getViews();
     views.unshift({name: name, url: url})
-    views.slice(maxLength - 1, 1)
+    views = views.slice(0, maxLength)
     FoundationDocs.RecentViews.storeViews(views);
     return;
   }
