@@ -8,21 +8,22 @@
   <div class="row">
     <div class="medium-6 large-8 columns">
       <h1 class="docs-page-title">{{ title }}</h1>
-
-      {{#if js}}
-        <span data-tooltip title="Requires a JavaScript library." class="docs-js label">JavaScript</span>
-      {{/if}}
-      {{#if mui}}
-        <span data-tooltip title="Supports Motion UI transitions." class="docs-mui label">Motion UI</span>
-      {{/if}}
-      {{#if library}}
-        <span data-tooltip title="This is an external library." class="docs-lib label"><a href="{{ library.github }}" target="_blank">Library</a></span>
-      {{/if}}
-      {{#if flexbox}}
-        <span data-tooltip title="Supports flexbox mode." class="docs-flex label"><a href="flexbox.html">Flexbox</a></span>
-      {{/if}}
-
       <p class="lead docs-page-lead">{{ description }}</p>
+
+      <div class="docs-requirement-labels">
+        {{#if js}}
+          <span data-tooltip title="Requires a JavaScript library." class="docs-js label">JavaScript</span>
+        {{/if}}
+        {{#if mui}}
+          <span data-tooltip title="Supports Motion UI transitions." class="docs-mui label">Motion UI</span>
+        {{/if}}
+        {{#if library}}
+          <span data-tooltip title="This is an external library." class="docs-lib label"><a href="{{ library.github }}" target="_blank">Library</a></span>
+        {{/if}}
+        {{#if flexbox}}
+          <span data-tooltip title="Supports flexbox mode." class="docs-flex label"><a href="flexbox.html">Flexbox</a></span>
+        {{/if}}
+      </div>
     </div>
     <div class="medium-6 large-4 columns">
       <!-- NEW Video component -->

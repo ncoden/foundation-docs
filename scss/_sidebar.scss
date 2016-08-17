@@ -3,6 +3,7 @@
 .docs-sidebar {
   margin-top: 1rem;
   border-right: 1px solid #f1f1f1;
+  // background: $docs-scaled-color-1;
   // padding-right: 5px;
 
   .docs-sidebar-label {
@@ -10,6 +11,8 @@
     font-size: 0.8rem;
     display: inline;
     vertical-align: bottom;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
   }
   .docs-sidebar-collapse-button {
     color: #B5B5B5;

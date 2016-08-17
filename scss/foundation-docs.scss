@@ -48,13 +48,20 @@
 .docs-contribute-menu {
   font-size: rem-calc(14px);
   margin: 1rem auto 0.75rem;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: rem-calc(8px);
 
   @include breakpoint(small only) {
     font-size: rem-calc(14);
   }
 
   a {
-    color: $dark-gray;
+    color: $medium-gray;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: $dark-gray;
+    }
   }
 
   i {
