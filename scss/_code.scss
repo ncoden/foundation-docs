@@ -1,7 +1,7 @@
 // Styles for code examples are here.
 
 // Variables
-$docs-code-background-color: #3d5058;
+$docs-code-background-color: #384951;
 $docs-code-padding: 1.5rem;
 $docs-code-border-color: #dbdbdb;
 $docs-code-saturation: 10%;
@@ -13,40 +13,40 @@ $docs-code-lightness: 50%;
 	font-family: 'SourceCodePro';
 	src: url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.eot');
 	src: url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
-	     url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
-	     url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.ttf') format('truetype'),
-	     url('WebFont.svg#webfont') format('svg');
+	url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+	url('../../assets/fonts/source-code-pro/SourceCodePro-Regular.ttf') format('truetype'),
+	url('WebFont.svg#webfont') format('svg');
 }
 
 // The inline code snippets
 code {
-    font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace;
-    color: #0a0a0a;
-    background-color: $docs-scaled-color-1;
-    border: 1px solid $docs-scaled-color-4;
-    padding: 0.125rem 0.3125rem 0.0625rem;
+	font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace;
+	color: #0a0a0a;
+	background-color: $docs-scaled-color-1;
+	border: 1px solid $docs-scaled-color-4;
+	padding: 0.125rem 0.3125rem 0.0625rem;
 }
 
 .docs-code-container {
-  border: 1px solid $docs-code-border-color;
-  margin-bottom: rem-calc(40px);
-  border-radius: rem-calc(3px);
-  overflow: hidden;
-  position: relative;
+	border: 1px solid $docs-code-border-color;
+	margin-bottom: rem-calc(40px);
+	border-radius: rem-calc(3px);
+	overflow: hidden;
+	position: relative;
 }
 
 .docs-code,
 pre {
-  position: relative;
+	position: relative;
 
-  // Standard Code UI
-  code {
-    display: block;
-    overflow-x: auto;
+	// Standard Code UI
+	code {
+		display: block;
+		overflow-x: auto;
 		background: $docs-code-background-color;
-    border: 0;
-    border-top: none;
-    padding: $docs-code-padding;
+		border: 0;
+		border-top: none;
+		padding: $docs-code-padding;
 		color: white;
 
 		// Selected text
@@ -55,102 +55,102 @@ pre {
 			color: white;
 			text-shadow: 0 1px 0 rgba(#000, 0.5);
 		}
-  }
+	}
 
-  .docs-reference & code {
-    padding: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
+	.docs-reference & code {
+		padding: 0.75rem;
+		margin-bottom: 0.75rem;
+	}
 }
 
 .docs-code.kitchen-sink {
-  border: $code-border;
-  max-height: 300px;
-  overflow-y: scroll;
-  margin-bottom: 1rem;
+	border: $code-border;
+	max-height: 300px;
+	overflow-y: scroll;
+	margin-bottom: 1rem;
 
-  code {
-    border: 0;
-  }
+	code {
+		border: 0;
+	}
 }
 
 // Dark Code UI
 .docs-code .bash {
-  color: #000;
+	color: #000;
 	border-color: #000;
 	background: #fff;
-  position: relative;
+	position: relative;
 
-  &::before {
-    content: '$ | ';
-    color: #AFAFAF;
-  }
+	&::before {
+		content: '$ | ';
+		color: #AFAFAF;
+	}
 
-  // Copy button in Dark UI
-  & + .docs-code-copy {
-    background: #616161;
-    color: #CFCFCF;
-  }
+	// Copy button in Dark UI
+	& + .docs-code-copy {
+		background: #616161;
+		color: #CFCFCF;
+	}
 }
 
 .docs-code-live {
-  background: white;
-  border-bottom: 1px solid $docs-code-border-color;
-  padding: $docs-code-padding $docs-code-padding 0 $docs-code-padding;
+	background: white;
+	border-bottom: 1px solid $docs-code-border-color;
+	padding: $docs-code-padding $docs-code-padding 0 $docs-code-padding;
 }
 
 // Styles for the copy button shown on every code sample
 .docs-code-copy {
-  position: absolute;
-  top: 0.75rem;
-  right: rem-calc(20px);
-  background: #EBEBEB;
-  border-radius: rem-calc(3px);
-  color: #838383;
-  font-size: 0.8rem;
-  padding: 0.75rem 1rem;
-  z-index: 1;
+	position: absolute;
+	top: 0.75rem;
+	right: rem-calc(20px);
+	background: #EBEBEB;
+	border-radius: rem-calc(3px);
+	color: #838383;
+	font-size: 0.8rem;
+	padding: 0.75rem 1rem;
+	z-index: 1;
 	user-select: none;
 
-  &:hover,
-  &.zeroclipboard-is-hover {
-    background: #DEDEDE;
-  }
+	&:hover,
+	&.zeroclipboard-is-hover {
+		background: #DEDEDE;
+	}
 
-  &:active {
-    color: white;
-    background: $primary-color;
-  }
+	&:active {
+		color: white;
+		background: $primary-color;
+	}
 }
 
 .docs-code-toggle {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: bold;
+	display: block;
+	margin-bottom: 1rem;
+	font-weight: bold;
 }
 
 .docs-code-iframe {
-  width: 100%;
+	width: 100%;
 	border: 0;
-  border-bottom: 1px solid #cacaca;
-  outline: 0;
-  margin-bottom: -6px;
-  height: 200px;
+	border-bottom: 1px solid #cacaca;
+	outline: 0;
+	margin-bottom: -6px;
+	height: 200px;
 }
 
 .docs-code-demo-title {
 	margin-top: rem-calc(40px);
 	margin-bottom: 4px;
-  font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 .docs-code-language {
-  color: #fff;
-  margin-right: 1rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-  text-transform: uppercase;
+	color: #fff;
+	margin-right: 1rem;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	text-transform: uppercase;
 	border-bottom: 1px solid white;
 	border-radius: 2px;
 	padding: 3px 8px;
@@ -158,49 +158,49 @@ pre {
 }
 
 .docs-code-toggle {
-  display: inline;
-  color: #959595;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+	display: inline;
+	color: #959595;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
 	user-select: none;
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 }
 
 .docs-code-wrapper {
 	background: $docs-code-background-color;
 	padding: $docs-code-padding;
 
-  .docs-code {
-    clear: both;
-  }
+	.docs-code {
+		clear: both;
+	}
 }
 
 .docs-code-inky {
-  display: none;
+	display: none;
 }
 
 .is-inky-enabled {
-  .docs-code-inky {
-    display: block;
-  }
+	.docs-code-inky {
+		display: block;
+	}
 
-  .docs-code-html {
-    display: none;
-  }
+	.docs-code-html {
+		display: none;
+	}
 }
 
 .global-zeroclipboard-container {
-  z-index: auto !important;
+	z-index: auto !important;
 }
 
 // Correct line-height overlap for inline code snippets
 ol code,
 li code,
 .callout code {
-  line-height: $global-lineheight + rem-calc(5px);
+	line-height: $global-lineheight + rem-calc(5px);
 }
 
 
@@ -217,7 +217,7 @@ li code,
 /* Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #a4a4a4;
+	color: #a4a4a4;
 }
 
 /* Framework Color */
@@ -229,7 +229,7 @@ li code,
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: scale-color($primary-color, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color($primary-color, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Terminal Commands */
@@ -241,12 +241,12 @@ li code,
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: scale-color(#18b9f6, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color(#18b9f6, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Yellow */
 .hljs-attribute {
-  color: scale-color(#f0c674, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color(#f0c674, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Green */
@@ -254,34 +254,34 @@ li code,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: scale-color(#b7d500, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color(#b7d500, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 	// b5bd68
 }
 
 /* Tomorrow Blue */
 .hljs-title,
 .hljs-section {
-  color: scale-color(#81a2be, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color(#81a2be, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 /* Tomorrow Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: scale-color(#b294bb, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: scale-color(#b294bb, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
 }
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  background: scale-color(#1d1f21, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
-  color: #c5c8c6;
-  padding: 0.5em;
+	display: block;
+	overflow-x: auto;
+	background: scale-color(#1d1f21, $saturation: $docs-code-saturation, $lightness: $docs-code-lightness);
+	color: #c5c8c6;
+	padding: 0.5em;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+	font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+	font-weight: bold;
 }

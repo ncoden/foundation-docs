@@ -6,6 +6,9 @@
     opacity: 0;
     bottom: -100px;
   }
+  75% {
+    bottom: 15px;
+  }
   100% {
     opacity: 1;
     bottom: 0;
