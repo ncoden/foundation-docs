@@ -51,6 +51,7 @@
       }
 
       &:active {
+        color: scale-color($primary-color, $lightness: 30%);
         background: $docs-scaled-color-2;
       }
     }
