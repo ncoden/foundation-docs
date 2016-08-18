@@ -23,15 +23,15 @@
   }
 
   li {
-    margin: rem-calc(6px 0);
+    margin: rem-calc(6px 15px);
     line-height: $global-lineheight;
     padding: 0;
-    display: block;
+    display: inline;
     font-size: rem-calc(16);
 
-    // &:first-child {
-    //   margin-left: 0;
-    // }
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
@@ -73,7 +73,7 @@
   li a {
     border: 1px solid transparent;
     padding: 5px 5px;
-    color: $primary-color;
+    color: $docs-scaled-color-8;
   }
 
   .active {

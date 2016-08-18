@@ -34,6 +34,8 @@
   font-size: rem-calc(15px);
   margin-right: 10px;
   background: $docs-scaled-color-1;
+  max-height: 218px;
+  overflow: auto;
 
   .pin-list-item {
 
@@ -41,12 +43,15 @@
       display: block;
       color: $dark-gray;
       padding: rem-calc(8px 10px);
+      border-bottom: 1px solid $docs-scaled-color-3;
 
       &:hover {
         color: $primary-color;
+        background-color: $docs-scaled-color-3;
       }
 
       &:active {
+        color: scale-color($primary-color, $lightness: 30%);
         background: $docs-scaled-color-2;
       }
     }

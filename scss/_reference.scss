@@ -4,14 +4,14 @@
   @include breakpoint(medium down) {
     @include table-stack;
   }
-  
+
   width: 100%;
   border: 0;
 
   thead {
     border: 0;
     background: transparent;
-    border-bottom: 2px solid $medium-gray;
+    border-bottom: 2px solid $docs-scaled-color-3;
 
     th {
       text-align: left;
@@ -22,13 +22,17 @@
   tbody {
     border: 0;
   }
-  
+
   // Reset code styles to look like plain text
   code {
     background: transparent;
     color: #222;
     border: 0;
     padding: 0;
+  }
+
+  td {
+    color: #656565;
   }
 
   // Make the first column's text bold, and don't wrap text
@@ -60,7 +64,11 @@
     background: transparent;
   }
 
+  tbody tr:nth-of-type(even) {
+    background: $docs-scaled-color-1;
+  }
+
   tbody tr:nth-of-type(even):hover {
-    background: $light-gray;
+    background: $docs-scaled-color-1;
   }
 }
