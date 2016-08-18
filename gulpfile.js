@@ -34,6 +34,11 @@ gulp.task('pages', function() {
     });
 });
 
+gulp.task('assets', function() {
+  return gulp.src('assets/**/*')
+    .pipe(gulp.dest('test/visual/_build/assets'));
+
+});
 // Compiles documentation CSS
 gulp.task('sass', function() {
   return gulp.src('test/visual/docs.scss')
@@ -63,12 +68,13 @@ gulp.task('javascript', ['copy-foundation-js'], function() {
 });
 
 // Creates a server and watches for file changes
-gulp.task('default', ['pages', 'sass', 'javascript'], function() {
+gulp.task('default', ['pages', 'sass', 'javascript', 'assets'], function() {
   browser.init({
     server: 'test/visual/_build'
   });
 
   gulp.watch(['test/fixtures/**/*', 'test/visual/**/*.html'], ['pages']);
   gulp.watch(['scss/**/*', 'test/visual/docs.scss'], ['sass']);
+  gulp.watch(['assets/**/*'], ['assets']);
   gulp.watch(['js/**/*'], ['javascript']);
 });
