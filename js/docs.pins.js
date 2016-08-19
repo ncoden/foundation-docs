@@ -41,7 +41,7 @@ var FoundationDocs = window.FoundationDocs;
   // Find pin with name, remove it, return true if
   // found and removed, false otherwise.
   FoundationDocs.Pins.clearPin = function(name) {
-    var pins = FouncationDocs.Pins.getPins();
+    var pins = FoundationDocs.Pins.getPins();
     var found = -1;
     for(var i = 0; i < pins.length; i++) {
       if(pins[i].name === name) {
@@ -64,11 +64,21 @@ var FoundationDocs = window.FoundationDocs;
   FoundationDocs.Pins.updatePinList = function() {
     var pins = FoundationDocs.Pins.getPins();
     var pinStr = ''
-    for(var i = 0; i < pins.length; i++) {
-      pinStr = pinStr + "<div class='pin-list-item'><a href='" + pins[i].url + "'>" + pins[i].name + "</a></div>";
+    if(pins.length) {
+      for(var i = 0; i < pins.length; i++) {
+        pinStr = pinStr + "<div class='pin-list-item'><a data-pin-link href='" + pins[i].url + "'>" + pins[i].name + "</a><a class='delete-pin' data-delete-pin>x</a></div>";
+      }
+    } else {
+      pinStr = "<p>Pin a page you want quick access to.</p>";
     }
     $('[data-pin-list]').html(pinStr);
-  };
+    $('[data-pin-list] [data-delete-pin]').click(function(e) {
+      e.preventDefault();
+      var name = $(this).parents('.pin-list-item').find('[data-pin-link]').text();
+      FoundationDocs.Pins.clearPin(name);
+      FoundationDocs.Pins.updatePinList();
+    });
+  }
 
 })();
 
