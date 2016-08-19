@@ -13,6 +13,11 @@
   margin-right: 10px;
   font-weight: bold;
 
+  @include breakpoint(small only) {
+    padding: 1rem;
+    width: 100%;
+  }
+
   &:hover {
     color: $docs-scaled-color-7;
     cursor: pointer;
@@ -32,7 +37,7 @@
   border: 1px solid $docs-scaled-color-4;
   border-radius: 3px;
   font-size: rem-calc(15px);
-  margin: 2px $docs-sidebar-inner-spacing 0.5rem $docs-sidebar-inner-spacing;
+  margin: 2px $docs-sidebar-inner-spacing 0.25rem $docs-sidebar-inner-spacing;
   background: $docs-scaled-color-1;
   max-height: 218px;
   overflow: auto;
@@ -61,6 +66,10 @@
         border: 1px solid $docs-scaled-color-4;
         opacity: 0.9;
 
+          @include breakpoint(small only) {
+            right: 15px;
+          }
+
           &:hover {
             color: $docs-scaled-color-8;
             background: $docs-scaled-color-1;
@@ -72,7 +81,7 @@
 
           &:active {
             color: white;
-            background: $docs-scaled-color-6;
+            background: $docs-scaled-color-8;
           }
       }
     }
@@ -82,6 +91,10 @@
       color: $dark-gray;
       padding: rem-calc(8px 10px);
       border-bottom: 1px solid $docs-scaled-color-3;
+
+      @include breakpoint(small only) {
+        padding: rem-calc(14px 15px);
+      }
 
       &:hover {
         color: $docs-scaled-color-9;

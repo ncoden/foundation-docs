@@ -13,7 +13,7 @@
 .twitter-typeahead,
 .banner-info,
 .banner-info h3 {
-  font-family: 'Helvetica Neue', Helvetica, "Proxima Nova", Arial, sans-serif;
+  font-family: "Proxima Nova", proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a > code {
@@ -22,6 +22,46 @@ a > code {
   padding: 0;
   color: $primary-color;
 }
+
+
+.subheader {
+  color: #848484;
+  // font-size: 80%;
+}
+
+// Prettify the subtitles when they're below headings
+h1 + .subheader {
+  margin-top: -1rem;
+
+  @include breakpoint(small only) {
+    margin-top: -0.5rem;
+  }
+}
+
+h2 + .subheader {
+  margin-top: -0.7rem;
+
+  @include breakpoint(small only) {
+    margin-top: 0.3rem;
+  }
+}
+
+h3 + .subheader {
+  margin-top: -1rem;
+
+  @include breakpoint(small only) {
+    margin-top: 0rem;
+  }
+}
+
+
+section.docs {
+  .subheader {
+    margin-bottom: 3rem;
+  }
+}
+
+
 
 .subtitle {
   color: #848484;
@@ -47,7 +87,7 @@ ol {
 
 
 // Steps
-// Mainly used on Installation page
+// Used on Installation page
 .steps {
 
   margin-top: rem-calc(20px);
@@ -96,3 +136,43 @@ ol {
   }
 
 } // end .steps
+
+
+
+
+// Mobile Sizes
+
+@include breakpoint(small only) {
+
+  h1 {
+    font-size: rem-calc(29px);
+  }
+
+  h2 {
+    font-size: rem-calc(26px);
+  }
+
+  h3 {
+    font-size: rem-calc(24px);
+  }
+
+  h4 {
+    font-size: rem-calc(20px);
+  }
+
+  h5 {
+    font-size: rem-calc(20px);
+  }
+
+  h6 {
+    font-size: rem-calc(20px);
+  }
+
+  p,
+  ul,
+  ol,
+  li {
+    font-size: rem-calc(17px);
+  }
+
+}

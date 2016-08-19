@@ -33,8 +33,14 @@
 
     &::before {
       display: inline-block;
-      content: '✔';
       margin-right: 0.5rem;
+      content:"";
+      background-image: url('../../assets/icons/check-white.svg');
+      background-size: 18px 38px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 17px;
+      height: 25px;
     }
   }
 }

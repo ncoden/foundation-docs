@@ -31,11 +31,11 @@
 {{!-- End container for docs --}}
 </div>
 
-<!-- NEW Examples component -->
+<!-- NEW Inspiration component -->
 <!-- @TODO: Need an if statement for when to show this -->
 {{#if sass}}
 <hr>
-{{> examples}}
+{{> inspiration}}
 {{/if}}
 
 <!-- Existing Building Blocks component -->
@@ -56,12 +56,12 @@
 <hr>
 
 <div class="row">
-<div class="medium-6 columns">
+  <div class="medium-12 large-6 columns">
 {{> github-help-wanted}}
-</div>
-<div class="medium-6 columns">
+  </div>
+  <div class="medium-12 large-6 columns">
 {{> github-recent-activity}}
-</div>
+  </div>
 </div>
 <!-- End Github components -->
 
@@ -73,14 +73,14 @@ Maybe #if hasNext == true?
 <hr>
 
 <div class="next-previous-links">
-<div class="previous-page-link">
-<span class="subtitle">PREVIOUS</span>
-<a href="#">Installation</a>
-</div>
-<div class="next-page-link">
-<span class="subtitle">NEXT</span>
-<a href="#">Buttons</a>
-</div>
+  <div class="previous-page-link">
+    <span class="subtitle">PREVIOUS</span>
+    <a href="#">Installation</a>
+  </div>
+  <div class="next-page-link">
+    <span class="subtitle">NEXT</span>
+    <a href="#">Buttons</a>
+  </div>
 </div>
 <!-- END Next/Previous page links -->
 

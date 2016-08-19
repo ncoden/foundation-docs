@@ -69,7 +69,7 @@ var FoundationDocs = window.FoundationDocs;
         pinStr = pinStr + "<div class='pin-list-item'><a data-pin-link href='" + pins[i].url + "'>" + pins[i].name + "</a><span class='delete-pin' data-delete-pin>x</span></div>";
       }
     } else {
-      pinStr = "<p>Pin a page you want quick access to.</p>";
+      pinStr = "<p>You can pin pages you want quick access to.</p>";
     }
     $('[data-pin-list]').html(pinStr);
     $('[data-pin-list] [data-delete-pin]').click(function(e) {

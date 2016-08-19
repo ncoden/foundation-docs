@@ -24,26 +24,33 @@
     font-size: rem-calc(20px);
     color: black;
 
-      &:hover {
-        color: $primary-color;
-      }
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   .previous-page-link {
-     a:before {
-       content: '\f108';
-       margin-right: 10px;
-     }
+    a:before {
+      @extend .di-arrow-left;
+      // position: absolute;
+      left: -10px;
+      margin-right: 10px;
+      margin-top: 8px;
+    }
   }
 
   .next-page-link {
     float: right;
     text-align: right;
 
-      a:after {
-        content: '\f10b';
-        margin-left: 10px;
-      }
+    a:before {
+      @extend .di-arrow-right;
+      float: right;
+      // position: absolute;
+      right: -10px;
+      margin-left: 10px;
+      margin-top: 8px;
+    }
   }
 
   i {
@@ -54,8 +61,8 @@
 
 // Horizontal Rule
 hr {
-    border-bottom: 1px solid $light-gray;
-    margin: rem-calc(60px) auto;
+  border-bottom: 1px solid $light-gray;
+  margin: rem-calc(60px) auto;
 }
 
 

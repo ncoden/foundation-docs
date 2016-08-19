@@ -197,10 +197,11 @@ pre {
 }
 
 // Correct line-height overlap for inline code snippets
+p code,
 ol code,
 li code,
 .callout code {
-	line-height: $global-lineheight + rem-calc(5px);
+	line-height: $global-lineheight + rem-calc(10px);
 }
 
 

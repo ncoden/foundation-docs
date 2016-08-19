@@ -1,6 +1,6 @@
 // Contains the left sidebar: pinned pages, navigation, and the ad space.
 
-$docs-sidebar-inner-spacing: 10px;
+$docs-sidebar-inner-spacing: 12px;
 
 .docs-sidebar {
   margin-top: 1rem;
@@ -9,16 +9,21 @@ $docs-sidebar-inner-spacing: 10px;
   border-radius: 7px;
   // padding-right: 5px;
 
+  @include breakpoint(small only) {
+    font-size: 1rem;
+  }
+
   .docs-sidebar-label {
     color: #656565;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     display: inline-block;
     // vertical-align: bottom;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     padding: 10px $docs-sidebar-inner-spacing 3px;
     line-height: 20px;
   }
+
   .docs-sidebar-collapse-button {
     color: #B5B5B5;
     font-size: 0.8rem;
@@ -54,7 +59,6 @@ $docs-sidebar-inner-spacing: 10px;
 }
 
 .docs-nav.menu {
-  // margin-top: 0.5rem;
   margin-top: 0.25rem;
   padding-bottom: 1rem;
 
@@ -70,7 +74,7 @@ $docs-sidebar-inner-spacing: 10px;
   a {
     font-size: 0.9rem;
     padding: 0.5rem 0;
-    padding-left: 0.9rem;
+    padding-left: ($docs-sidebar-inner-spacing);
     line-height: 1.4;
     color: #616161;
     display: block;
@@ -78,6 +82,11 @@ $docs-sidebar-inner-spacing: 10px;
     &:hover {
       background: $docs-scaled-color-3;
     }
+
+    @include breakpoint(small only) {
+      font-size: 1rem;
+    }
+
   }
 
   .current a {
@@ -86,12 +95,13 @@ $docs-sidebar-inner-spacing: 10px;
   }
 
   .label {
-    background-color: #ddd;
-    color: #777;
+    background-color: $docs-scaled-color-1;
+    color: #6c6c6c;
     margin-left: 5px;
-    padding: 0.22222rem 0.44444rem 0.22222rem;
-    font-size: 0.61111rem;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.6rem;
   }
+
 }
 
 .docs-nav-title {
@@ -101,15 +111,30 @@ $docs-sidebar-inner-spacing: 10px;
   font-weight: 700;
   letter-spacing: 0.08rem;
   line-height: 1;
-  margin-bottom: 0.5rem;
   border-top: 1px solid $docs-scaled-color-4;
   border-bottom: 1px solid $docs-scaled-color-4;
-  padding: 1rem $docs-sidebar-inner-spacing;
+  padding: 1rem $docs-sidebar-inner-spacing 1rem 0;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
+  vertical-align: middle;
+
+  @include breakpoint(small only) {
+    font-size: 0.8rem;
+  }
 
   &:first-child {
     margin-top: 0;
   }
+
+  .sidebar-icon {
+    margin-left: $docs-sidebar-inner-spacing;
+    margin-right: 4px;
+    line-height: 1.4;
+    vertical-align: middle;
+    height: 20px;
+    margin-top: -3px;
+  }
+
 }
 
 .docs-nav-version {
