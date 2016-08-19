@@ -6,11 +6,12 @@
 }
 
 .pin-button {
-  color: $docs-scaled-color-10;
-  padding: 5px 15px;
+  color: $primary-color;
+  padding: 2px 15px;
+  display: inline-block;
   font-size: 13px;
-  text-align: center;
   margin-right: 10px;
+  font-weight: bold;
 
   &:hover {
     color: $docs-scaled-color-7;
@@ -28,17 +29,15 @@
 } // end pin-button
 
 .pin-list {
-  margin-bottom: 0.5rem;
-  border: 1px solid $docs-scaled-color-3;
+  border: 1px solid $docs-scaled-color-4;
   border-radius: 3px;
   font-size: rem-calc(15px);
-  margin-right: 10px;
+  margin: 2px $docs-sidebar-inner-spacing 0.5rem $docs-sidebar-inner-spacing;
   background: $docs-scaled-color-1;
   max-height: 218px;
   overflow: auto;
 
   .pin-list-item {
-
     a {
       display: block;
       color: $dark-gray;
@@ -46,20 +45,26 @@
       border-bottom: 1px solid $docs-scaled-color-3;
 
       &:hover {
-        color: $primary-color;
-        background-color: $docs-scaled-color-3;
+        color: $docs-scaled-color-9;
+        background-color: $docs-scaled-color-2;
       }
 
       &:active {
-        color: scale-color($primary-color, $lightness: 30%);
-        background: $docs-scaled-color-2;
+        color: white;
+        background: $docs-scaled-color-4;
       }
     }
 
+    // Pin Icon
     & a:before {
-      content: '\f2a6';
-      color: $dark-gray;
       margin-right: rem-calc(10px);
+      content:"";
+      background-image: url('../../assets/icons/pin.svg');
+      background-size: 13px 15px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 15px;
+      height: 14px;
     }
   }
 
