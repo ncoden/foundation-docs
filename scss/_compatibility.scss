@@ -8,7 +8,7 @@
   }
 
   tr {
-    border-bottom: 1px solid $medium-gray;
+    border-bottom: 1px solid $docs-scaled-color-5;
   }
 
   tr,
@@ -17,7 +17,7 @@
   }
 
   tr:nth-child(even) td:first-child {
-    background: $light-gray;
+    background: $docs-scaled-color-1;
   }
 
   td:first-child {
@@ -25,8 +25,8 @@
   }
 
   .works {
-    background: rgba($success-color, 0.15);
-    color: $success-color;
+    background: $docs-green;
+    color: #fff;
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;

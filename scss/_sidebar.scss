@@ -10,7 +10,7 @@ $docs-sidebar-inner-spacing: 10px;
   // padding-right: 5px;
 
   .docs-sidebar-label {
-    color: #a4a4a4;
+    color: #656565;
     font-size: 0.8rem;
     display: inline-block;
     // vertical-align: bottom;
@@ -41,6 +41,9 @@ $docs-sidebar-inner-spacing: 10px;
       width: 16px;
       height: 13px;
     }
+
+    // @TODO: Clicked State
+    // .collapsed { background-image: url('../../assets/icons/expand.svg'); }
   }
 
   &.sticky.is-stuck.is-at-top {
@@ -101,7 +104,7 @@ $docs-sidebar-inner-spacing: 10px;
   margin-bottom: 0.5rem;
   border-top: 1px solid $docs-scaled-color-4;
   border-bottom: 1px solid $docs-scaled-color-4;
-  padding: 1rem 0.9rem 1rem $docs-sidebar-inner-spacing;
+  padding: 1rem $docs-sidebar-inner-spacing;
   margin-top: 1rem;
 
   &:first-child {
