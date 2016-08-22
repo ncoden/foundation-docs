@@ -41,6 +41,7 @@
   background: $docs-scaled-color-1;
   max-height: 218px;
   overflow: auto;
+  user-select: none;
 
   p {
     color: $docs-scaled-color-8;

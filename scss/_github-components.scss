@@ -1,67 +1,129 @@
 // Contains styles for the Github Recent Activity and Github Help Wanted componenets
 
-// Help Wanted
-.github-help-wanted {
-  .github-help-wanted-issue {
-    border-left: 3px solid blue;
-    padding-left: 10px;
-  }
-
-  .easy.github-help-wanted-issue {
-    border-color: $docs-green;
-  }
-
-  .medium.github-help-wanted-issue {
-    border-color: $docs-yellow;
-  }
-
-  .hard.github-help-wanted-issue {
-    border-color: $docs-red;
-  }
-}
-
-// Recent Activity
-.github-recent-activity {
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+// Github Issues
+// This applies to both the Github Help Wanted and Recent Activity components
+.github-issues {
+  .github-issue {
     position: relative;
+    border: 1px solid #DDDDDD;
+    border-top-color: transparent;
+    padding: 15px;
+    @include clearfix;
 
-    li {
-      margin: 10px auto;
-      color: $medium-gray;
-      vertical-align: baseline;
-      line-height: $global-lineheight;
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-top: 1px solid #DDDDDD;
+    }
 
-      &:first-child {
-        margin-top: 0;
+    &:last-child {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    &:hover {
+      border-color: $docs-scaled-color-4;
+      background-color: $docs-scaled-color-1;
+    }
+
+    &:active {
+      background-color: $docs-scaled-color-3;
+    }
+  }
+
+  .github-issue a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .github-issue-tag {
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: rem-calc(12px);
+    display: inline-block;
+    // letter-spacing: rem-calc(0.5px);
+    line-height: inherit;
+    font-weight: bold;
+    vertical-align: baseline;
+
+    @mixin github-issue-box-shadow($bg-color) {
+      box-shadow: 0px 2px 0px rgba(darken($bg-color, 8%), 1);
+    }
+
+    // Difficulty colors
+    &.easy {
+      background-color: #B8D30B;
+      @include github-issue-box-shadow(#B8D30B);
+      color: white;
+      &:before {
+        content: 'Easy';
       }
     }
-
-    span {
-      vertical-align: baseline;
-      line-height: $global-lineheight;
-      display: inline-block;
+    &.intermediate {
+      background-color: #2FB4C5;
+      @include github-issue-box-shadow(#2FB4C5);
+      color: white;
+      &:before {
+        content: 'Intermediate';
+      }
     }
-
-    img {
-      margin-right: rem-calc(10px);
-      display: inline-block;
+    &.challenging {
+      background-color: #A9014B;
+      @include github-issue-box-shadow(#A9014B);
+      color: white;
+      &:before {
+        content: 'Challenging';
+      }
     }
+  }
 
-    a {
-      color: $secondary-color;
-      line-height: $global-lineheight;
-      vertical-align: baseline;
-    }
+  .github-issue-title {
+    font-weight: bold;
+    color: #222222;
+    clear: both;
+    display: block;
+  }
 
-    .github-recent-activity-date {
-      font-size: rem-calc(13px);
-      float: right;
-      padding: rem-calc(3px);
-      line-height: $global-lineheight;
-      vertical-align: baseline;
-    }
+  .github-issue-subtitle {
+    color: #6B6B6B;
+    // display: block;
+    font-size: rem-calc(14px);
+    display: block;
+  }
+
+  .github-issue-author {
+    font-weight: bold;
+    color: #222222;
+  }
+
+  .github-issue-action {
+    font-weight: normal;
+    color: #222222;
+  }
+
+  .github-issue-avatar {
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    float: left;
+    margin-right: rem-calc(10px);
+    border-radius: 4px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+  }
+
+}
+
+
+.github-issues {
+  .button-docs {
+    margin-top: rem-calc(15px);
   }
 }

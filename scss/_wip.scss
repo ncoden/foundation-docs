@@ -65,6 +65,10 @@ hr {
   margin: rem-calc(60px) auto;
 }
 
+hr.docs-hr-small {
+  margin: rem-calc(30px) auto rem-calc(15px);
+}
+
 
 // Requirement labels ("Requires a JS library")
 .docs-requirement-labels {

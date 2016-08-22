@@ -89,14 +89,8 @@ header.docs-header {
   }
 
   .header-button {
-    color: $docs-scaled-color-10;
-    background: $docs-scaled-color-1;
-    border-radius: 3px;
-    height: auto;
-    padding: 7px 15px;
-    font-size: 13px;
-    display: inline-block;
     @include vertical-center;
+    @extend .button-docs.secondary;
 
     &:hover {
       background: $docs-scaled-color-3;
@@ -318,7 +312,7 @@ header.docs-header {
 
   .desc {
     font-size: rem-calc(14px);
-    white-space: nowrap;
+    // white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
