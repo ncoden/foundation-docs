@@ -10,10 +10,8 @@
 
 <hr>
 
-{{!-- Start container for docs and table of contents --}}
-<div class="row">
-
 {{!-- Start container for docs --}}
+<div class="row">
 <div class="medium-12 columns" id="docs">
 
 {{ docs }}
@@ -29,6 +27,7 @@
 {{/if}}
 
 {{!-- End container for docs --}}
+</div>
 </div>
 
 <!-- NEW Inspiration component -->
@@ -59,7 +58,7 @@
   <div class="medium-12 large-6 columns">
 {{> github-help-wanted}}
   </div>
-  <div class="medium-12 large-6 columns">
+  <div class="medium-12 large-6 columns docs-stacked-spacing">
 {{> github-recent-activity}}
   </div>
 </div>
@@ -72,7 +71,8 @@ Maybe #if hasNext == true?
 -->
 <hr>
 
-<div class="next-previous-links">
+<div class="row">
+  <div class="next-previous-links">
   <div class="previous-page-link">
     <span class="subtitle">PREVIOUS</span>
     <a href="#">Installation</a>
@@ -83,8 +83,11 @@ Maybe #if hasNext == true?
   </div>
 </div>
 <!-- END Next/Previous page links -->
-
 </div>
+
+
+
+<!-- </div> -->
 {{!-- End container for docs and table of contents --}}
 
 </article>

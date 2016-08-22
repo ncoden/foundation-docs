@@ -7,7 +7,7 @@ tags:
 ---
 
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-12 large-6 columns">
     <h2 id="installing-foundation">Installing Foundation</h2>
     <p>There are a number of ways to install Foundation for Sites. If you're just getting started, we recommend downloading Yeti Launch, which allows you to quickly set up starter projects with any Foundation framework. You can also install our Node CLI to do the same thing.</p>
     <p>It's also possible to manually install Foundation for Sites into your project through npm, Bower, Meteor, or Composer.</p>
@@ -17,7 +17,7 @@ tags:
     <a href="http://foundation.zurb.com/sites/docs/v/4.3.2" class="secondary button-docs">Foundation 4</a>
     <a href="http://foundation.zurb.com/sites/docs/v/3.2.5/" class="secondary button-docs">Foundation 3</a>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-12 large-6 columns docs-stacked-spacing">
     <h2 id="learning-foundation">Learning Foundation</h2>
     <h4>Understanding the framework</h4>
     <p>Getting used to Foundation is a breeze! The syntax of the framework is easy to understand, and the structure is consistent.</p>
@@ -44,7 +44,7 @@ tags:
 ---
 
 <div class="row">
-  <div class="medium-6 columns">
+  <div class="medium-12 large-6 columns">
     <h2 id="documentation">Documentation</h2>
 
     <div class="flex-video widescreen">
@@ -71,7 +71,7 @@ tags:
       </li>
     </ul>
   </div>
-  <div class="medium-6 columns">
+  <div class="medium-12 large-6 columns docs-stacked-spacing">
     <h3 id="most-viewed-pages">Most-viewed Pages</h3>
     <!-- @TODO: Add real links -->
     <ul class="icon-buttons-docs row small-up-2 medium-up-2 large-up-4" data-equalizer data-equalize-on="medium">

@@ -39,7 +39,8 @@ h1 + .subheader {
 }
 
 h2 + .subheader {
-  margin-top: -0.7rem;
+  margin-top: -0.5rem;
+  line-height: 1.3;
 
   @include breakpoint(small only) {
     margin-top: 0.3rem;
@@ -58,6 +59,10 @@ h3 + .subheader {
 section.docs {
   .subheader {
     margin-bottom: 3rem;
+
+    @include breakpoint(medium down) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
