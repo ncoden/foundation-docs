@@ -14,13 +14,13 @@
 
 .button-docs.secondary {
   @extend .secondary;
-  background: $docs-scaled-color-1;
+  background: $docs-scaled-color-2;
   color: $docs-scaled-color-10;
-  border-color: $docs-scaled-color-3;
+  border-color: $docs-scaled-color-4;
 
   &:hover {
     color: #545454;
-    background: $docs-scaled-color-2;
+    background: $docs-scaled-color-3;
     // border-color: #bbbbbb;
   }
 
