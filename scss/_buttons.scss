@@ -5,6 +5,7 @@
   border: 1px solid #1d81c3;
   background: $primary-color;
   text-align: left;
+  vertical-align: top;
 
   &:active {
     color: white;
@@ -26,7 +27,6 @@
   }
 
   &:active {
-    // color: white;
     background: $docs-scaled-color-4;
   }
 }

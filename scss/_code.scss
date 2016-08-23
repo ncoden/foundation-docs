@@ -101,6 +101,7 @@ pre {
 
 // Styles for the copy button shown on every code sample
 .docs-code-copy {
+	@extend .button-docs.secondary;
 	position: absolute;
 	top: 0.75rem;
 	right: rem-calc(20px);
@@ -111,17 +112,17 @@ pre {
 	padding: 0.75rem 1rem;
 	z-index: 1;
 	user-select: none;
+	transition: box-shadow 100ms ease-in-out;
 
 	&:hover,
 	&.zeroclipboard-is-hover {
-		background: #DEDEDE;
-		box-shadow: 0 3px 6px rgba(#000, 0.2);
+		box-shadow: 0 3px 6px rgba(#000, 0.5);
 	}
 
 	&:active {
-		color: white;
-		background: $primary-color;
+		box-shadow: 0 1px 10px rgba(#000, 0.3);
 	}
+
 }
 
 .docs-code-iframe {

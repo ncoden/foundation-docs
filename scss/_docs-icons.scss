@@ -9,6 +9,34 @@
   margin-right: 7px;
 }
 
+.di-pin {
+  &:before {
+    content:"";
+    background-image: url('../../assets/icons/pin.svg');
+    background-size: 13px 15px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    float: left;
+    line-height: inherit;
+  }
+}
+
+.di-open {
+  &:before {
+    content:"";
+    background-image: url('../../assets/icons/open.svg');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 11px;
+    height: 14px;
+    float: left;
+    line-height: inherit;
+  }
+}
+
 .di-arrow-left {
   &:before {
     content:"";

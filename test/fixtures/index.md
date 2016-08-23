@@ -11,11 +11,18 @@ tags:
     <h2 id="installing-foundation">Installing Foundation</h2>
     <p>There are a number of ways to install Foundation for Sites. If you're just getting started, we recommend downloading Yeti Launch, which allows you to quickly set up starter projects with any Foundation framework. You can also install our Node CLI to do the same thing.</p>
     <p>It's also possible to manually install Foundation for Sites into your project through npm, Bower, Meteor, or Composer.</p>
-    <a href="installation.html" class="large button-docs">Install Foundation for Sites</a>
-    <h4>Other Versions</h4>
-    <a href="http://foundation.zurb.com/sites/docs/v/5.5.3" class="secondary button-docs">Foundation 5</a>
-    <a href="http://foundation.zurb.com/sites/docs/v/4.3.2" class="secondary button-docs">Foundation 4</a>
-    <a href="http://foundation.zurb.com/sites/docs/v/3.2.5/" class="secondary button-docs">Foundation 3</a>
+
+    <a href="installation.html" class="button-docs">Install Foundation for Sites 6.2.3</a>
+    <ul class="dropdown menu docs-dropdown" data-dropdown-menu>
+      <li>
+        <a href="#">Other versions</a>
+        <ul class="menu">
+          <li><a href="http://foundation.zurb.com/sites/docs/v/5.5.3"><i class="di-open"></i>Foundation 5</a></li>
+          <li><a href="http://foundation.zurb.com/sites/docs/v/4.3.2"><i class="di-open"></i>Foundation 4</a></li>
+          <li><a href="http://foundation.zurb.com/sites/docs/v/3.2.5/"><i class="di-open"></i>Foundation 3</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <div class="medium-12 large-6 columns docs-stacked-spacing">
     <h2 id="learning-foundation">Learning Foundation</h2>

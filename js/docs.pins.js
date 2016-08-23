@@ -66,7 +66,7 @@ var FoundationDocs = window.FoundationDocs;
     var pinStr = ''
     if(pins.length) {
       for(var i = 0; i < pins.length; i++) {
-        pinStr = pinStr + "<div class='pin-list-item'><a data-pin-link href='" + pins[i].url + "'>" + pins[i].name + "</a><span class='delete-pin' data-delete-pin>x</span></div>";
+        pinStr = pinStr + "<div class='pin-list-item'><a href='" + pins[i].url + "'></a><i class='di-pin'></i><span class='pin-list-item-name' data-pin-link>" + pins[i].name + "</span><span class='delete-pin' data-delete-pin>x</span></div>";
       }
     } else {
       pinStr = "<p>You can pin pages you want quick access to.</p>";

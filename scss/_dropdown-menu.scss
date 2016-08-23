@@ -31,6 +31,7 @@ $docs-dropdown-border-radius: 3px;
       background: $docs-scaled-color-1;
       font-size: rem-calc(14px);
       width: auto;
+      border-bottom: 1px solid $docs-scaled-color-3;
 
       &:hover {
         background: $docs-scaled-color-2;
@@ -46,11 +47,10 @@ $docs-dropdown-border-radius: 3px;
     .is-dropdown-submenu {
       min-width: auto;
       max-width: 100%;
-    }
-
-    // Line-height adjustment
-    .menu > li > a {
-      line-height: 1.4;
+      width: auto;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
     }
 
     // Dropdown right
@@ -61,6 +61,20 @@ $docs-dropdown-border-radius: 3px;
       border-top-right-radius: 0;
       border-bottom-left-radius: $docs-dropdown-border-radius;
       border-bottom-right-radius: $docs-dropdown-border-radius;
+    }
+
+    // Bug fixes
+    .is-dropdown-submenu-item a:hover {
+      background: inherit;
+    }
+
+    // Line-height adjustment
+    .menu > li > a {
+      line-height: 1.4;
+    }
+
+    &.menu > li.is-dropdown-submenu-parent > a {
+      padding: 0.85em 1.4rem 0.85em 1em!important;
     }
 
 }
