@@ -118,17 +118,15 @@
     margin-right: rem-calc(10px);
     border-radius: 4px;
 
-      img {
-        height: 100%;
-        width: 100%;
-      }
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
 }
 
 
-.github-issues {
-  .button-docs {
-    margin-top: rem-calc(15px);
-  }
+.github-issues + .button-docs {
+  margin-top: rem-calc(15px);
 }
