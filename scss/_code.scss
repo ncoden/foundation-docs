@@ -1,6 +1,7 @@
 // Styles for code examples are here.
 
 // Variables
+$docs-code-container-margin: rem-calc(40px);
 $docs-code-background-color: #384951;
 $docs-code-padding-vertical: 1rem;
 $docs-code-padding-horizontal: 1.5rem;
@@ -30,10 +31,15 @@ code {
 
 .docs-code-container {
 	border: 1px solid $docs-code-border-color;
-	margin-bottom: rem-calc(40px);
+	margin-bottom: $docs-code-container-margin;
 	border-radius: rem-calc(3px);
 	overflow: hidden;
 	position: relative;
+
+	& + p {
+		$docs-code-container-margin-final: $docs-code-container-margin - rem-calc(5px);
+		margin-top: -(#{$docs-code-container-margin-final});
+	}
 }
 
 .docs-code,
@@ -81,16 +87,12 @@ pre {
 	border-color: #000;
 	background: #fff;
 	position: relative;
+	padding: $docs-code-padding-vertical $docs-code-padding-horizontal;
+	border-radius: 3px;
 
 	&::before {
 		content: '$ | ';
 		color: #AFAFAF;
-	}
-
-	// Copy button in Dark UI
-	& + .docs-code-copy {
-		background: #616161;
-		color: #CFCFCF;
 	}
 }
 
@@ -117,15 +119,17 @@ pre {
 	padding: 0.75rem 1rem;
 	z-index: 1;
 	user-select: none;
-	transition: all 150ms ease-in-out;
+	transition: all 125ms ease-in-out;
 
 	&:hover,
 	&.zeroclipboard-is-hover {
-		box-shadow: 0 3px 15px rgba(#000, 0.5);
+		box-shadow: 0 2px 10px rgba(#000, 0.4);
 	}
 
 	&:active {
-		box-shadow: 0 1px 10px rgba(#000, 0.3);
+		box-shadow: 0 1px 5px rgba(#000, 0.3);
+		transform: scale(0.95);
+		transform-origin: center center;
 	}
 
 }
@@ -173,7 +177,7 @@ pre {
 
 .docs-code-wrapper {
 	background: $docs-code-background-color;
-	padding: $docs-code-padding-vertical $docs-code-padding-horizontal;
+	padding: $docs-code-padding-vertical $docs-code-padding-horizontal 1.4rem;
 
 	.docs-code {
 		clear: both;

@@ -1,12 +1,29 @@
 // Table of contents which becomes anchored to the top of each page
 
+.docs-toc-wrap {
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  display: block;
+
+  &.is-stuck {
+    margin-top: 0!important;
+    // position: fixed;
+    // left: 0!important;
+    // max-width: 100%!important;
+  }
+}
+
 .docs-toc {
   margin: 2rem auto -3rem;
   // border-bottom: 1px solid $light-gray;
   font-size: 0.8rem;
-  display: block!important;
+  display: inline-block!important;
   border: 1px solid transparent;
   position: relative;
+  height: auto;
+  min-height: 20px;
+
 
   .menu .docs-nav-title {
     margin-top: 0;
@@ -44,17 +61,6 @@
   > div {
     padding: 5px;
     border: 1px solid #cacaca;
-  }
-}
-
-.docs-toc-wrap {
-  width: 100%;
-
-  &.is-stuck {
-    margin-top: 0!important;
-    // position: fixed;
-    // left: 0!important;
-    // max-width: 100%!important;
   }
 }
 

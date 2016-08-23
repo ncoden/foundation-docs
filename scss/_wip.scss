@@ -102,14 +102,19 @@ hr.docs-hr-small {
 }
 
 
-//
+// List with links and text
+ul.docs-list-links-info {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
 
-.docs-list-info {
+.docs-list-links-info {
   li a {
     font-weight: bold;
   }
 
   li p {
-
+    color: #8a8a8a;
   }
 }
