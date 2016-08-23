@@ -31,8 +31,8 @@ var source = {
     // HTML that renders if there are no results
     notFound: function(query) {
       var line1 = '<div class="tt-empty">No results for "' + query.query + '".';
-      var line2 = '<a href="#" class="button secondary">Search Github</a>';
-      var line3 = '<a href="#" class="button secondary">Search the Forums</a>';
+      var line2 = '<a href="#" class="button-docs secondary">Search Github</a>';
+      var line3 = '<a href="#" class="button-docs secondary">Search the Forums</a>';
       var line4 = '</div>';
 
       return line1 + "<br/>" + line2 + line3 + line4;

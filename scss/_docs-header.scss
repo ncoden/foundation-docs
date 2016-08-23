@@ -331,6 +331,14 @@
   .tt-empty {
     padding: 1rem;
 
+    .button-docs {
+      margin-top: 2rem;
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
+
     &:before {
       content: ':(';
       font-weight: bold;
