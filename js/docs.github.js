@@ -67,10 +67,9 @@ var FoundationDocs = window.FoundationDocs;
 
   FoundationDocs.Github.displayResults = function(results) {
     var str = '';
-    for(var i = 0; i < results.length; i++) {
+    for(var i = 0; i < results.slice(0, 5).length; i++) {
       str = str + FoundationDocs.Github.createIssue(results[i]);
     }
-    console.log(str);
     $('[data-github-issues]').html(str);
   };
 
