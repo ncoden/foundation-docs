@@ -4,7 +4,8 @@ if (typeof(window.FoundationDocs.Github) === 'undefined') { window.FoundationDoc
 var FoundationDocs = window.FoundationDocs;
 !(function() {
   // TODO:  Make this depend on which repo we're in
-  var githubBaseUrl = 'https://api.github.com/repos/zurb/foundation-sites';
+  var repo = $('.docs-component').data().framework;
+  var githubBaseUrl = 'https://api.github.com/repos/zurb/' + repo;
   FoundationDocs.Github.fetchCommits = function() {
 
     var commits = [];
@@ -34,7 +35,7 @@ var FoundationDocs = window.FoundationDocs;
           if(!results[id].timestamp || results[id].timestamp < timestamp) {
             results[id].timestamp = Date.parse(timestamp);
             results[id].message = commit.commit.message;
-            results[id].url = commit.commit.url;
+            results[id].url = commit.commit.html_url;
           }
         }
       }
