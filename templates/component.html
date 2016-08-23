@@ -50,11 +50,10 @@
 <hr>
 {{> related-resources}}
 {{/if}}
-
 <!-- Github Help Wanted + Recent Activity -->
 <!-- @TODO: Need an if statement for when to show this -->
+{{#if relatedFiles}}
 <hr>
-
 <div class="row">
   <div class="medium-12 large-6 columns">
 {{> github-help-wanted}}
@@ -63,6 +62,7 @@
 {{> github-recent-activity}}
   </div>
 </div>
+{{/if}}
 <!-- End Github components -->
 
 <!-- NEW Next/Previous pages links -->
@@ -85,6 +85,9 @@ Maybe #if hasNext == true?
 <!-- END Next/Previous page links -->
 
 </div>
+{{#if relatedFiles}}
+  {{!-- Awkward to put it here but supercollider is what knows about the files, so it has to happen here --}}
+  {{setupSourceFiles relatedFiles}}
+{{/if}}
 {{!-- End container for docs and table of contents --}}
-
 </article>

@@ -62,7 +62,7 @@ gulp.task('copy-foundation-js', function() {
 });
 
 gulp.task('javascript', ['copy-foundation-js'], function() {
-  gulp.src('js/**/*.js')
+  gulp.src(['assets/js/**/*.js', 'js/**/*.js'])
     .pipe($.concat('docs.js'))
     .pipe(gulp.dest('test/visual/_build'));
 });
