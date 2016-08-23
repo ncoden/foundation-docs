@@ -7,6 +7,11 @@
 var $h2s = $('.docs-component h2');
 var $toc = $('[data-docs-toc]');
 
+// Get the dimensions of the docs-header + in-page nav
+// This value should be piped into the data-threshold="" value for the Magellan in-page nav (TOC)
+var docsHeaderHeight = Foundation.Box.GetDimensions('.docs-toc-wrap');
+console.log(docsHeaderHeight);
+
 $h2s.each(function() {
   // Ignore <h2>s inside of a rendered code sample
   if ($(this).parents('.docs-code-live').length) return;

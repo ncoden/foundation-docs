@@ -6,11 +6,11 @@
     margin-bottom: rem-calc(15px);
 
     @include breakpoint(medium up) {
-      max-height: 250px;
+      max-height: 200px;
     }
 
     @include breakpoint(large up) {
-      max-height: 300px;
+      max-height: 250px;
     }
 
     img {

@@ -6,7 +6,10 @@
   }
 
   p {
-    max-height: 150px;
+    display: block;
+    height: 80px;
+    max-height:80px;
+    margin: 0 auto;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: rem-calc(15px);
@@ -16,7 +19,7 @@
 }
 
 .section-inspiration .image-container {
-  max-height: 300px;
+  max-height: 325px;
   overflow: hidden;
   border: 1px solid #e6e6e6;
   transition: all 0.15s ease-in-out;
