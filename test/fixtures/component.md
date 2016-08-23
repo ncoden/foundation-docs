@@ -3,7 +3,9 @@ title: Component
 description: This is a component page.
 tags:
   - tag
-sass: test/fixtures/component.scss
+sass:
+  - test/fixtures/component.scss
+  - test/fixtures/**/*.scss
 js: test/fixtures/component.js
 flex: true
 ---
