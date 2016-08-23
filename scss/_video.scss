@@ -3,19 +3,14 @@
 }
 
 .docs-video-trigger {
+  @extend .button-docs.secondary;
   display: inline-block;
   position: relative;
   padding: rem-calc(5px 15px);
-  background: $docs-scaled-color-1;
-  color: $docs-scaled-color-8;
-  border: 1px solid $docs-scaled-color-4;
-  border-radius: 3px;
   font-size: 85%;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid $docs-scaled-color-8;
-    // background: red;
   }
 }
 
@@ -38,7 +33,6 @@
   z-index: 10000;
 }
 
-
 .docs-video-inner {
   margin: 0 auto;
   width: 100%;
@@ -46,8 +40,6 @@
   height: 100px;
   display: block;
 }
-
-
 
 // Move the video for desktops
 @include breakpoint(large up) {

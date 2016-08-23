@@ -6,26 +6,22 @@
   </ul>
 
   <div class="row">
-
-  <!-- @TODO: depending on which framework, show Yeti or Inky -->
-  <!-- add this class to a container: .mascot-hero -->
-
     <div class="medium-6 large-8 columns" id="mascot-hero">
       <h1 class="docs-page-title">{{ title }}</h1>
       <p class="lead docs-page-lead">{{ description }}</p>
 
       <div class="docs-requirement-labels">
         {{#if js}}
-          <span data-tooltip title="Requires a JavaScript library." class="docs-js label">JavaScript</span>
+        <span data-tooltip title="Requires a JavaScript library." class="docs-js label">JavaScript</span>
         {{/if}}
         {{#if mui}}
-          <span data-tooltip title="Supports Motion UI transitions." class="docs-mui label">Motion UI</span>
+        <span data-tooltip title="Supports Motion UI transitions." class="docs-mui label">Motion UI</span>
         {{/if}}
         {{#if library}}
-          <span data-tooltip title="This is an external library." class="docs-lib label"><a href="{{ library.github }}" target="_blank">Library</a></span>
+        <span data-tooltip title="This is an external library." class="docs-lib label"><a href="{{ library.github }}" target="_blank">Library</a></span>
         {{/if}}
         {{#if flexbox}}
-          <span data-tooltip title="Supports flexbox mode." class="docs-flex label"><a href="flexbox.html">Flexbox</a></span>
+        <span data-tooltip title="Supports flexbox mode." class="docs-flex label"><a href="flexbox.html">Flexbox</a></span>
         {{/if}}
       </div>
     </div>
@@ -34,6 +30,20 @@
       <!-- @TODO: Need an if statement for when to show this -->
       {{#if sass}}
       {{> video}}
+      {{/if}}
+      <!-- NEW Version Switch component -->
+      <!-- @TODO: Need an if statement for when to show this -->
+      {{#if sass}}
+      <ul class="dropdown menu docs-dropdown docs-dropdown-right" data-dropdown-menu>
+        <li>
+          <a href="#">Other versions</a>
+          <ul class="menu">
+            <li><a href="#">Foundation 5</a></li>
+            <li><a href="#">Foundation 4</a></li>
+            <li><a href="#">Foundation 3</a></li>
+          </ul>
+        </li>
+      </ul>
       {{/if}}
     </div>
   </div>

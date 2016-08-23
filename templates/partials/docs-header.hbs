@@ -29,7 +29,7 @@
     <div class="medium-8 columns">
 
       <div class="docs-search-container">
-        <input type="text" class="docs-search" data-docs-search placeholder="Find a page, component, variable, mixin, function...">
+        <input type="text" class="docs-search" data-docs-search placeholder="Find a page, component, variable, mixin, function..." tabindex="1">
       </div>
 
     </div>
@@ -37,14 +37,14 @@
 
       <div class="docs-header-buttons">
 
-        <div class="recently-viewed secondary button-docs" data-toggle="recently-viewed-items">
-          <i class="fi-clock"></i> Recently viewed</a>
-          <ul class="recently-viewed-items" id="recently-viewed-items" data-recently-viewed data-toggler=".is-Visible">
-            <li class="recently-viewed-item">
-              <a href="#">Pages you view will show up here.</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="recently-viewed dropdown menu docs-dropdown docs-dropdown-right" data-dropdown-menu>
+          <li>
+            <a href="#">Recently viewed</a>
+            <ul class="menu recently-viewed-items" data-recently-viewed>
+              <li class="recently-viewed-item"><a href="">Pages you view will show up here.</a></li>
+            </ul>
+          </li>
+        </ul>
 
       </div>
 

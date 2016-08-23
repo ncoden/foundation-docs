@@ -84,97 +84,89 @@
       height: $docs-header-height;
 
       @include breakpoint(medium up) {
-        float: right;
-      }
-    }
-
-    .header-button {
-      @include vertical-center;
-      // @extend .button-docs.secondary;
-
-      &:hover {
-        cursor: pointer;
+        // float: right;
       }
     }
 
     .recently-viewed {
-      @extend .header-button;
-      z-index: 0;
       position: relative;
-    }
-
-    $recently-viewed-bg-color: $docs-scaled-color-1;
-    $recently-viewed-border-color: $docs-scaled-color-4;
-
-    .recently-viewed-items {
-      display: none;
-      position: absolute;
-      top: 2.5rem;
-      right: 0;
-      width: rem-calc(220px);
-      border-radius: 3px;
-      background: $recently-viewed-bg-color;
-      border: 1px solid $recently-viewed-border-color;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
-
-      &.is-Visible {
-        display: block;
-        position: absolute;
-        top: 2.75rem;
-        right: 0;
-        width: rem-calc(220px);
-        z-index: 10000;
-
-        // Display the items when button is clicked
-        .recently-viewed-item {
-          display: block;
-          width: 100%;
-          position: relative;
-          border-bottom: 1px solid $recently-viewed-border-color;
-
-          &:last-child {
-            border-bottom: 0;
-          }
-
-          &:hover {
-            background: darken($recently-viewed-bg-color, 5%);
-          }
-
-          &:active {
-            background: $docs-scaled-color-4;
-
-            a {color: white}
-          }
-
-          a {
-            color: $docs-scaled-color-10;
-            display: block;
-            width: 100%;
-            height: 100%;
-            padding: rem-calc(10px 15px);
-          }
-        }
-      }
-
-      &:before {
-        position: absolute;
-        top: rem-calc(-8px);
-        right: 30%;
-        transform: translateX(30%);
-        content:"\A";
-        height: 0;
-        border-style: solid;
-        border-width: rem-calc(0 8px 8px 8px);
-        border-color: transparent transparent $recently-viewed-bg-color transparent;
-      }
-
-    }
-
-    // Hide the items until button is clicked
-    .recently-viewed-item {
-      display: none;
+      @include vertical-center;
+      float: right;
     }
   }
+
+  //   $recently-viewed-bg-color: $docs-scaled-color-1;
+  //   $recently-viewed-border-color: $docs-scaled-color-4;
+  //
+  //   .recently-viewed-items {
+  //     display: none;
+  //     position: absolute;
+  //     top: 2.5rem;
+  //     right: 0;
+  //     width: rem-calc(220px);
+  //     border-radius: 3px;
+  //     background: $recently-viewed-bg-color;
+  //     border: 1px solid $recently-viewed-border-color;
+  //     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
+  //
+  //     &.is-Visible {
+  //       display: block;
+  //       position: absolute;
+  //       top: 2.75rem;
+  //       right: 0;
+  //       width: rem-calc(220px);
+  //       z-index: 10000;
+  //
+  //       // Display the items when button is clicked
+  //       .recently-viewed-item {
+  //         display: block;
+  //         width: 100%;
+  //         position: relative;
+  //         border-bottom: 1px solid $recently-viewed-border-color;
+  //
+  //         &:last-child {
+  //           border-bottom: 0;
+  //         }
+  //
+  //         &:hover {
+  //           background: darken($recently-viewed-bg-color, 5%);
+  //         }
+  //
+  //         &:active {
+  //           background: $docs-scaled-color-4;
+  //
+  //           a {color: white}
+  //         }
+  //
+  //         a {
+  //           color: $docs-scaled-color-10;
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           padding: rem-calc(10px 15px);
+  //         }
+  //       }
+  //     }
+  //
+  //     &:before {
+  //       position: absolute;
+  //       top: rem-calc(-8px);
+  //       right: 30%;
+  //       transform: translateX(30%);
+  //       content:"\A";
+  //       height: 0;
+  //       border-style: solid;
+  //       border-width: rem-calc(0 8px 8px 8px);
+  //       border-color: transparent transparent $recently-viewed-bg-color transparent;
+  //     }
+  //
+  //   }
+  //
+  //   // Hide the items until button is clicked
+  //   .recently-viewed-item {
+  //     display: none;
+  //   }
+  // }
 
   .docs-search-container {
     position: relative;

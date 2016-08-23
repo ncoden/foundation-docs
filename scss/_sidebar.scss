@@ -6,8 +6,8 @@ $docs-sidebar-inner-spacing: 12px;
   margin-top: 1rem;
   border-right: 1px solid #f1f1f1;
   background: $docs-scaled-color-2;
-  border-radius: 7px;
-  // padding-right: 5px;
+  border: 1px solid $docs-scaled-color-4;
+  border-radius: 3px;
 
   @include breakpoint(small only) {
     font-size: 1rem;

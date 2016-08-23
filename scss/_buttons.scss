@@ -14,20 +14,21 @@
 
 .button-docs.secondary {
   @extend .secondary;
-  background: $docs-scaled-color-2;
-  color: $docs-scaled-color-10;
-  border-color: $docs-scaled-color-4;
+  background: $docs-scaled-color-1;
+  color: $docs-scaled-color-8;
+  border: 1px solid $docs-scaled-color-4;
+  border-radius: 3px;
 
   &:hover {
-    color: #545454;
-    background: $docs-scaled-color-3;
-    // border-color: #bbbbbb;
+    color: $docs-scaled-color-10;
+    background: $docs-scaled-color-2;
+    border-color: $docs-scaled-color-5;
   }
 
-  // &:active {
-  //   color: white;
-  //   background: #cacaca;
-  // }
+  &:active {
+    // color: white;
+    background: $docs-scaled-color-4;
+  }
 }
 
 .icon-buttons-docs {
@@ -35,6 +36,7 @@
   li {
     list-style: none;
     text-align: left;
+    // @extend .button-docs.secondary;
 
     @include breakpoint(medium up) {
       text-align: center;
@@ -42,14 +44,11 @@
   }
 
   li a {
+    @extend .button-docs.secondary;
     padding: rem-calc(10px 15px);
     color: $docs-scaled-color-10;
-    background: $docs-scaled-color-2;
-    border: 1px solid $docs-scaled-color-6;
-    display: block;
-    width: 100%;
-    border-radius: 2px;
     margin-bottom: rem-calc(15px);
+    display: block;
     line-height: 1.2;
   }
 

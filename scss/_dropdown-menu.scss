@@ -1,0 +1,66 @@
+// General Dropdowns
+
+// Variables
+$docs-dropdown-border-radius: 3px;
+
+.docs-dropdown {
+  @extend .button-docs.secondary;
+  display: inline-block;
+
+    // Dropdown title
+    a {
+      color: $docs-scaled-color-10;
+      margin-right: 10px;
+      line-height: 1.5;
+      font-size: rem-calc(14px);
+    }
+
+    // Dropdown arrow
+    a:after {
+      border-color: $docs-scaled-color-10 transparent transparent!important;
+    }
+
+    // Menu container
+    ul.menu.submenu.is-dropdown-submenu {
+      border-color: $docs-scaled-color-4;
+      box-shadow: 0 2px 6px rgba(#000, 0.15);
+    }
+
+    // Menu items
+    li.is-submenu-item.is-dropdown-submenu-item {
+      background: $docs-scaled-color-1;
+      font-size: rem-calc(14px);
+      width: auto;
+
+      &:hover {
+        background: $docs-scaled-color-2;
+      }
+
+      &:active {
+        background: $docs-scaled-color-4;
+      }
+
+    }
+
+    // Menu width
+    .is-dropdown-submenu {
+      min-width: auto;
+      max-width: 100%;
+    }
+
+    // Line-height adjustment
+    .menu > li > a {
+      line-height: 1.4;
+    }
+
+    // Dropdown right
+    &.docs-dropdown-right > li.opens-right > .is-dropdown-submenu {
+      left: auto;
+      right: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: $docs-dropdown-border-radius;
+      border-bottom-right-radius: $docs-dropdown-border-radius;
+    }
+
+}
