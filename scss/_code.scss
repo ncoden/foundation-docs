@@ -2,7 +2,8 @@
 
 // Variables
 $docs-code-background-color: #384951;
-$docs-code-padding: 1.5rem;
+$docs-code-padding-vertical: 1rem;
+$docs-code-padding-horizontal: 1.5rem;
 $docs-code-border-color: #dbdbdb;
 $docs-code-saturation: 10%;
 $docs-code-lightness: 50%;
@@ -46,7 +47,7 @@ pre {
 		background: $docs-code-background-color;
 		border: 0;
 		border-top: none;
-		padding: $docs-code-padding;
+		// padding: $docs-code-padding;
 		color: white;
 
 		// Selected text
@@ -96,7 +97,11 @@ pre {
 .docs-code-live {
 	background: white;
 	border-bottom: 1px solid $docs-code-border-color;
-	padding: $docs-code-padding $docs-code-padding 0 $docs-code-padding;
+	padding: $docs-code-padding-vertical $docs-code-padding-horizontal;
+
+	.button {
+		margin-bottom: 0;
+	}
 }
 
 // Styles for the copy button shown on every code sample
@@ -168,7 +173,7 @@ pre {
 
 .docs-code-wrapper {
 	background: $docs-code-background-color;
-	padding: $docs-code-padding;
+	padding: $docs-code-padding-vertical $docs-code-padding-horizontal;
 
 	.docs-code {
 		clear: both;

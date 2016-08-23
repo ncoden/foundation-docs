@@ -43,11 +43,16 @@
         <p class="docs-notice-deprecated">Deprecated in {{this.deprecated}}</p>
       {{/if}}
 
-      <div class="docs-code">
-        <pre><code>{{writeSassMixin this}}</code></pre>
+      <div class="docs-code-container">
+        <div class="docs-code-wrapper">
+          <div class="docs-code" data-docs-code>
+            <p class="docs-code-language">SASS</p>
+            <pre><code>{{writeSassMixin this}}</code></pre>
+          </div>
+        </div>
       </div>
 
-      {{md this.description}}
+      <p>{{md this.description}}</p>
 
       {{#if this.aliased}}
         <p><strong>Aliases:</strong> {{#each this.aliased}}<code>{{this}}()</code>{{/each}}</p>
@@ -100,11 +105,16 @@
         <p class="docs-notice-deprecated">Deprecated in {{this.deprecated.version}}</p>
       {{/if}}
 
-      <div class="docs-code">
-        <pre><code>{{writeSassFunction this}}</code></pre>
+      <div class="docs-code-container">
+        <div class="docs-code-wrapper">
+          <div class="docs-code" data-docs-code>
+            <p class="docs-code-language">SASS</p>
+            <pre><code>{{writeSassFunction this}}</code></pre>
+          </div>
+        </div>
       </div>
 
-      {{md this.description}}
+      <p>{{md this.description}}</p>
 
       {{writeSassLink this.link}}
 

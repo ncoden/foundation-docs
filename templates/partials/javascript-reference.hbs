@@ -15,21 +15,30 @@
 
   </section>
   {{/with}}{{/if}}
-
+  
   {{#each js.class}}
   <section>
     {{#heading 3 'js-class'}}Foundation.{{this.name}}{{/heading}}
 
     {{md this.description}}
 
-    <div class="docs-code"><pre><code>{{writeJsConstructor this.name}}</code></pre></div>
+    <div class="docs-code-container">
+      <div class="docs-code-wrapper">
+        <div class="docs-code" data-docs-code>
+          <p class="docs-code-language">JS</p>
+          <pre>
+            <code>{{writeJsConstructor this.name}}</code>
+          </pre>
+        </div>
+      </div>
+    </div>
 
     {{#if this.fires}}
-      <p><strong>Fires these events:</strong>
+    <p><strong>Fires these events:</strong>
       {{#each this.fires}}
-        {{this}}
+      {{this}}
       {{/each}}
-      </p>
+    </p>
     {{/if}}
 
     {{#if this.params}}
@@ -85,10 +94,10 @@
         <tr><th>Name</th><th>Description</th></tr>
       </thead>
       {{#each js.event}}
-        <tr>
-          <td><code>{{formatJsEventName this.name ../title}}</code></td>
-          <td>{{this.description}}</td>
-        </tr>
+      <tr>
+        <td><code>{{formatJsEventName this.name ../title}}</code></td>
+        <td>{{this.description}}</td>
+      </tr>
       {{/each}}
     </table>
   </section>
@@ -104,18 +113,23 @@
     <section>
       {{#heading 4 this.name}}{{this.name}}{{/heading}}
 
-      <div class="docs-code">
-        <pre><code>{{ writeJsFunction this }}</code></pre>
+      <div class="docs-code-container">
+        <div class="docs-code-wrapper">
+          <div class="docs-code" data-docs-code>
+            <p class="docs-code-language">JS</p>
+            <pre><code>{{ writeJsFunction this }}</code></pre>
+          </div>
+        </div>
       </div>
 
-      {{md this.description}}
+      <p>{{md this.description}}</p>
 
       {{#if this.fires}}
-        <p><strong>Fires these events:</strong>
+      <p><strong>Fires these events:</strong>
         {{#each this.fires}}
-          {{this}}
+        {{this}}
         {{/each}}
-        </p>
+      </p>
       {{/if}}
 
       {{#if this.params}}
