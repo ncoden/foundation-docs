@@ -306,12 +306,12 @@
 
     .desc {
       font-size: rem-calc(14px);
-      // white-space: nowrap;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint(medium up) {
       padding: 0.25rem 0.5rem;
 
       .name {
@@ -320,7 +320,7 @@
       }
 
       .desc {
-        // float: left;
+        float: left;
         width: 60%;
       }
     }
