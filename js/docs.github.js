@@ -35,7 +35,7 @@ var FoundationDocs = window.FoundationDocs;
           if(!results[id].timestamp || results[id].timestamp < timestamp) {
             results[id].timestamp = Date.parse(timestamp);
             results[id].message = commit.commit.message;
-            results[id].url = commit.commit.html_url;
+            results[id].url = commit.html_url;
           }
         }
       }
