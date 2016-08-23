@@ -82,44 +82,44 @@ tags:
     <h3 id="most-viewed-pages">Most-viewed Pages</h3>
     <!-- @TODO: Add real links -->
     <ul class="icon-buttons-docs row small-up-2 medium-up-2 large-up-4" data-equalizer data-equalize-on="medium">
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i> Grid
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/general.svg" alt="Grid"> Grid
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i> Buttons &amp; Controls
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/settings.svg" alt="Buttons and Controls"> Buttons &amp; Controls
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i> Navigation
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/navigation.svg" alt="Buttons and Controls"> Navigation
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i> Forms
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/general.svg" alt="Buttons and Controls"> Forms
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i> Typography
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/typography.svg" alt="Buttons and Controls"> Typography
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i>Sass
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/sass.svg" alt="Buttons and Controls"> Sass
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i>Top Bar
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/navigation.svg" alt="Buttons and Controls"> Top Bar
         </a>
       </li>
-      <li class="column">
-        <a href="#" data-equalizer-watch>
-          <i class="fi-plus"></i>Abide
+      <li class="column" data-equalizer-watch>
+        <a href="#">
+          <img src="assets/icons/plugins.svg" alt="Buttons and Controls"> Abide
         </a>
       </li>
     </ul>

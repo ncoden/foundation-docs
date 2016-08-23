@@ -12,19 +12,11 @@
   font-size: 13px;
   margin-right: 10px;
   font-weight: bold;
+  @extend a;
 
   @include breakpoint(small only) {
     padding: 1rem;
     width: 100%;
-  }
-
-  &:hover {
-    color: $docs-scaled-color-7;
-    cursor: pointer;
-  }
-
-  &:active {
-    color: $docs-scaled-color-10;
   }
 
   // &::before {
@@ -105,6 +97,7 @@
       overflow: hidden;
       display: block;
       width: auto;
+      text-overflow: ellipsis;
     }
 
     a {
