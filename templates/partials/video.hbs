@@ -1,7 +1,7 @@
-<div class="docs-video">
+<div class="docs-video" data-docs-video>
 
   <!-- Default state: button -->
-  <div class="docs-video-trigger" data-toggle="docs-video-expanded">
+  <div class="docs-video-trigger">
     <div class="docs-video-left">
       <i class="fi-video"></i>
     </div>
@@ -10,17 +10,21 @@
       <span>Learn how to do X</span> <!-- @TODO: Can we customize the subtitle for each manually? -->
     </div>
   </div>
-  <!-- When video button is clicked: -->
-  <div class="docs-video-expanded" id="docs-video-expanded" data-toggler=".is-Visible" data-closable data-sticky-container>
 
-    <div class="docs-video-inner" data-sticky data-anchor="docs" data-sticky-on="large" data-close>
-      <div class="flex-video widescreen">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/UVLINsAuFEI" frameborder="0" allowfullscreen></iframe>
-        <span data-toggle="docs-video-expanded">Pin to side</span>
-        <!-- <span id="docs-video-expanded" data-toggler=".is-Visible"></span> -->
+  <!-- When video button is clicked: -->
+  <div id="docs-video-container" class="docs-video-container" data-closable>
+    <div class="docs-video-expanded">
+      <div data-sticky-container>
+        <div class="docs-video-inner" data-sticky data-anchor="docs" data-sticky-on="large">
+          <span data-close><img src="assets/icons/delete.svg" alt=""></span>
+          <div class="video-container">
+            <div class="flex-video widescreen">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/UVLINsAuFEI" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 
 </div>
